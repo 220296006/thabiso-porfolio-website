@@ -30,11 +30,17 @@ export class NavigationComponent implements OnInit {
 
   toggleNav() {
     this.showNav = !this.showNav;
+    this.checkWindowSize();
   }
 
+  closeNav() {
+    this.showNav = false;
+  }
+
+  
   checkWindowSize() {
     const screenWidth = window.innerWidth || 0;
-        const breakpoint = 991;
+    const breakpoint = 1199;
 
     if (screenWidth <= breakpoint) {
       this.showNav = false;
@@ -43,6 +49,7 @@ export class NavigationComponent implements OnInit {
     }
   }
 
+                           
   scrollToElement(hash: string) {
     const target = document.querySelector(hash);
     if (target) {
@@ -50,11 +57,12 @@ export class NavigationComponent implements OnInit {
         behavior: 'smooth',
         block: 'start'
       });
-  
-      this.showNav = false;
+
+      this.showNav = false; // Close the navigation menu after clicking a link
     }
   }
-  
+
+
 
   private highlightActiveLink() {
     if (isPlatformBrowser(this.platformId)) {

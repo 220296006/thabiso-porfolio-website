@@ -6,9 +6,15 @@
     <title>Navigation</title>
 </head>
 <body>
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <i class="bi bi-list mobile-nav-toggle d-xl-none" (click)="toggleNav()">
+    <div class="hamburger-icon">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </i>
   <!-- ======= Header ======= -->
-  <header id="header">
+  <header id="header"  [class.mobile-nav-active]="showNav">
     <div class="d-flex flex-column">
 
       <div class="profile">
@@ -25,7 +31,7 @@
         </div>
       </div>
 
-      <nav id="navbar" class="nav-menu navbar">
+      <nav id="navbar" class="nav-menu navbar" [ngClass]="{'mobile-nav-active': showNav}">
         <ul>
           <li><a routerLink="/home" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a routerLink="/about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>

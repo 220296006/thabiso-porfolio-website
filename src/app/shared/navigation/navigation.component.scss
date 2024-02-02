@@ -8,6 +8,11 @@ header {
     background-color: #111; /* Adjust the background color as needed */
     padding: 15px; /* Adjust the padding as needed */
     z-index: 2; /* Ensure navigation is above other content */
+    transition: left 0.3s;
+
+    &.mobile-nav-active {
+        left: -100%; /* Hide the header when mobile-nav-active */
+      }
 }
 
 header a {
@@ -22,6 +27,23 @@ header a:hover {
     color: #fcfbfa; /* Adjust the link hover color as needed */
 }
 
+
+
+.bi-list {
+    &.mobile-nav-active {
+      .hamburger-icon {
+        .bar:nth-child(1) {
+          transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .bar:nth-child(2) {
+          opacity: 0;
+        }
+        .bar:nth-child(3) {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+      }
+    }
+  }
 
 /* Mobile Navigation */
 .mobile-nav-toggle {
@@ -44,17 +66,18 @@ header a:hover {
     border-radius: 50px;
     cursor: pointer;
   }
-  
-  .mobile-nav-active {
-    overflow: hidden;
+
+  mobile-nav-active .mobile-nav-toggle {
+    transform: rotate(45deg); /* Adjust rotation as needed */
   }
   
   .mobile-nav-active #header {
-    left: 0;
+    left: -100%; /* Hide the header when mobile-nav-active */
   }
 
+  
 #content {
-    margin-left: 250px; /* Set the margin to the width of the sidebar */
+    margin-left: 0px; /* Set the margin to the width of the sidebar */
     padding: 15px; /* Adjust the padding as needed */
     z-index: 1;
 }
@@ -113,7 +136,7 @@ header a:hover {
 
     .profile-img {
         display: inline-block;
-        border: 4px solid #273B4A; /* Backdrop outline color */
+        border: 6px solid #273B4A; /* Backdrop outline color */
         border-radius: 50%;
         overflow: hidden;
         margin-left: 91px;
