@@ -7,11 +7,16 @@ header {
     overflow-y: auto;
     background-color: #111; /* Adjust the background color as needed */
     padding: 15px; /* Adjust the padding as needed */
-    z-index: 2; /* Ensure navigation is above other content */
+    z-index: 100; /* Ensure navigation is above other content */
     transition: left 0.3s;
 
+    left: -100%; 
     &.mobile-nav-active {
-        left: -100%; /* Hide the header when mobile-nav-active */
+        left: 0; /* Show the header when mobile-nav-active */
+      }
+    
+      @media (max-width: 1199px) {
+        left: -100%; /* Hide the header by default for screens less than or equal to 1199px */
       }
 }
 

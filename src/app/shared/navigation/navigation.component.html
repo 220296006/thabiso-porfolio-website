@@ -6,12 +6,7 @@
     <title>Navigation</title>
 </head>
 <body>
-  <i class="bi bi-list mobile-nav-toggle d-xl-none" (click)="toggleNav()">
-    <div class="hamburger-icon">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
+  <i class="bi mobile-nav-toggle d-xl-none" [ngClass]="{'bi-list': !showNav, 'bi-x': showNav}" (click)="toggleNav()">
   </i>
   <!-- ======= Header ======= -->
   <header id="header"  [class.mobile-nav-active]="showNav">

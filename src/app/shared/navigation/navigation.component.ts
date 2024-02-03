@@ -1,5 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -7,10 +6,10 @@ import { NavigationEnd, Router } from '@angular/router';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
   showNav: boolean = false;
 
-  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(private router: Router) {}
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -18,9 +17,7 @@ export class NavigationComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (typeof window !== 'undefined') {
-      this.checkWindowSize();
-    }
+    this.checkWindowSize();
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.highlightActiveLink();
@@ -30,14 +27,8 @@ export class NavigationComponent implements OnInit {
 
   toggleNav() {
     this.showNav = !this.showNav;
-    this.checkWindowSize();
   }
 
-  closeNav() {
-    this.showNav = false;
-  }
-
-  
   checkWindowSize() {
     const screenWidth = window.innerWidth || 0;
     const breakpoint = 1199;
@@ -49,7 +40,6 @@ export class NavigationComponent implements OnInit {
     }
   }
 
-                           
   scrollToElement(hash: string) {
     const target = document.querySelector(hash);
     if (target) {
@@ -58,25 +48,21 @@ export class NavigationComponent implements OnInit {
         block: 'start'
       });
 
-      this.showNav = false; // Close the navigation menu after clicking a link
+      this.showNav = false;
     }
   }
 
-
-
   private highlightActiveLink() {
-    if (isPlatformBrowser(this.platformId)) {
-      const currentRoute = this.router.url;
-      const links = document.querySelectorAll('#navbar .scrollto');
+    const currentRoute = this.router.url;
+    const links = document.querySelectorAll('#navbar .scrollto');
 
-      links.forEach(link => {
-        const route = link.getAttribute('routerLink');
-        if (route && currentRoute.includes(route)) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
-      });
-    }
+    links.forEach(link => {
+      const route = link.getAttribute('routerLink');
+      if (route && currentRoute.includes(route)) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
   }
 }
