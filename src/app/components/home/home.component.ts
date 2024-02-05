@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import Typed from 'typed.js';
 
@@ -8,9 +8,15 @@ import Typed from 'typed.js';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
+  constructor(
+  @Inject(PLATFORM_ID) private platformId: any,
+  private renderer: Renderer2, private el: ElementRef)
+   {}
 
   ngOnInit(): void {
+    this.scrollIntoView('#home');
+    this.scrollIntoView('#about');
+    
     if (isPlatformBrowser(this.platformId)) {
       const typedElement = document.querySelector('.typed') as HTMLElement | null;
       if (typedElement) {
@@ -25,6 +31,13 @@ export class HomeComponent implements OnInit {
           loop: true,
         });
       }
+    }
+  }
+  
+  private scrollIntoView(sectionId: string): void {
+    const section = this.el.nativeElement.querySelector(sectionId);
+    if (section) {
+      this.renderer.setProperty(section, 'scrollIntoView', { behavior: 'smooth', block: 'start' });
     }
   }
 }

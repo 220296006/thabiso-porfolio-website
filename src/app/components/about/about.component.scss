@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 50px;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+  }
+  
+  .page-header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 40px 0;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .about {
+    padding: 60px 0;
+  }
+  
+  .content h2 {
+    color: #007bff;
+  }
+  
+  .content p {
+    color: #495057;
+  }
+  
+  .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .content ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: #495057;
+  }
+  
+  .content ul li img {
+    margin-right: 10px;
+    max-width: 20px;
+    max-height: 20px;
+  }
+  
+  .content strong {
+    margin-right: 5px;
+  }
+  
+  .content a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .content a:hover {
+    text-decoration: underline;
+  }
+  
+  .content img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .py-3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .m-0 {
+    margin: 0;
+  }
