@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
    {}
 
   ngOnInit(): void {
-    this.scrollIntoView('#home');
-    this.scrollIntoView('#about');
+    this.scrollIntoView('home');
+    this.scrollIntoView('about');
     
     if (isPlatformBrowser(this.platformId)) {
       const typedElement = document.querySelector('.typed') as HTMLElement | null;

@@ -6,18 +6,25 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { AboutComponent } from './components/about/about.component';
+import { RouterModule } from '@angular/router';
+import { ScrollToDirective } from './ScrollToDirective';
+import { StoreModule } from '@ngrx/store';
+import { appReducer } from './app.reducer';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavigationComponent,
-    AboutComponent
+    AboutComponent,
+    ScrollToDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    RouterModule,
+    StoreModule.forRoot({ app: appReducer }),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

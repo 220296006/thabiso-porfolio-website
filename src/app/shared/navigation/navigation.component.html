@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation</title>
 </head>
+
 <body>
   <i class="bi mobile-nav-toggle d-xl-none" [ngClass]="{'bi-list': !showNav, 'bi-x': showNav}" (click)="toggleNav()">
   </i>
   <!-- ======= Header ======= -->
-  <header id="header"  [class.mobile-nav-active]="showNav">
+  <header id="header" [class.mobile-nav-active]="showNav">
     <div class="d-flex flex-column">
 
       <div class="profile">
@@ -22,15 +24,16 @@
           <a href="https://www.facebook.com/thabiso.matsaba" class="facebook"><i class="bx bxl-facebook"></i></a>
           <a href="https://www.instagram.com/shaun_matsaba" class="instagram"><i class="bx bxl-instagram"></i></a>
           <a href="https://github.com/220296006" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://www.linkedin.com/in/thabiso-matsaba-b4289616b" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/thabiso-matsaba-b4289616b" class="linkedin"><i
+              class="bx bxl-linkedin"></i></a>
         </div>
       </div>
 
       <nav id="navbar" class="nav-menu navbar" [ngClass]="{'mobile-nav-active': showNav}">
         <ul>
-          <li><a routerLink="/home" routerLinkActive="active" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a routerLink="/about" routerLinkActive="active" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a routerLink="/home"  class="nav-link scrollto active" (click)="scrollToComponent('home')"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a routerLink="/about" class="nav-link scrollto" (click)="scrollToComponent('about')"> <i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i><span>Portfolio</span></a></li>
           <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
@@ -38,4 +41,5 @@
     </div>
   </header>
 </body>
+
 </html>

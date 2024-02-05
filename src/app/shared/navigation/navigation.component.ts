@@ -1,5 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { navigateTo } from 'src/app/app.actions';
 
 @Component({
   selector: 'app-navigation',
@@ -9,7 +11,7 @@ import { NavigationEnd, Router } from '@angular/router';
 export class NavigationComponent {
   showNav: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,  private store: Store) {}
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -32,7 +34,6 @@ export class NavigationComponent {
   checkWindowSize() {
     const screenWidth = window.innerWidth || 0;
     const breakpoint = 1199;
-
     if (screenWidth <= breakpoint) {
       this.showNav = false;
     } else {
@@ -40,17 +41,13 @@ export class NavigationComponent {
     }
   }
 
-  scrollToElement(hash: string) {
-    const target = document.querySelector(hash);
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-
-      this.showNav = false;
+  scrollToComponent(componentId: string) {
+    const element = document.getElementById(componentId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
+  
 
   private highlightActiveLink() {
     const currentRoute = this.router.url;
