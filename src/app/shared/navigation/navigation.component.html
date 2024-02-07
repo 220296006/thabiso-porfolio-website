@@ -29,13 +29,19 @@
         </div>
       </div>
 
-      <nav id="navbar" class="nav-menu navbar" [ngClass]="{'mobile-nav-active': showNav}">
+      <nav id="navbar" class="nav-menu navbar" [class.mobile-nav-active]="showNav">
         <ul>
-          <li><a routerLink="/home"  class="nav-link scrollto active" (click)="scrollToComponent('home')"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a routerLink="/about" class="nav-link scrollto" (click)="scrollToComponent('about')"> <i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i><span>Portfolio</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a routerLink="/home" class="nav-link scrollto" (click)="smoothScrollTo('home')"><i
+                class="bx bx-home"></i><span>Home</span></a></li>
+          <li><a routerLink="/about" class="nav-link scrollto"  (click)="smoothScrollTo('about')"><i
+                class="bx bx-user"></i><span>About</span></a></li>
+          <li><a routerLink="/services" class="nav-link scrollto"  (click)="smoothScrollTo('service')"><i
+                class="bx bx-server"></i> <span>Services</span></a></li>
+                <li><a routerLink="/portfolio" class="nav-link scrollto"  (click)="smoothScrollTo('portfolio')"><i
+                class="bx bx-book-content"></i><span>Portfolio</span></a></li>
+          <li><a routerLink="/contact" class="nav-link scrollto"  (click)="smoothScrollTo('contact')"><i 
+            class="bx bx-envelope" ></i> <span>Contact</span></a>
+          </li>
         </ul>
       </nav>
     </div>

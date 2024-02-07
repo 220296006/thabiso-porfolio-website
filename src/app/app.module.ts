@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { ScrollToDirective } from './ScrollToDirective';
 import { StoreModule } from '@ngrx/store';
 import { appReducer } from './app.reducer';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { appReducer } from './app.reducer';
     AppRoutingModule,
     RouterModule,
     StoreModule.forRoot({ app: appReducer }),
-    
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

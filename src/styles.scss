@@ -2,7 +2,9 @@ body {
   font-family: "Roboto", sans-serif;
   color: #272829;
   transition: background-color 0.5s ease;
+  margin-top: 17px;
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -24,15 +26,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto Mono", sans-serif;
 }
 
 section {
-  padding: 1px 0;
-  overflow: hidden;
-  height: 100vh;
-  scroll-snap-align: start;
-  overflow-y: scroll; 
+  margin-top: -17px 
 }
 
 .section-bg {
@@ -169,8 +167,4 @@ section {
   form {
     max-width: 40rem;
   }
-}
-
-html {
-  scroll-behavior: smooth;
 }

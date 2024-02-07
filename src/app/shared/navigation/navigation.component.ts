@@ -1,7 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Renderer2, ElementRef } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { Store } from '@ngrx/store';
-import { navigateTo } from 'src/app/app.actions';
 
 @Component({
   selector: 'app-navigation',
@@ -11,7 +9,7 @@ import { navigateTo } from 'src/app/app.actions';
 export class NavigationComponent {
   showNav: boolean = false;
 
-  constructor(private router: Router,  private store: Store) {}
+  constructor(private router: Router, private renderer: Renderer2, private elRef: ElementRef) {}
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -25,6 +23,10 @@ export class NavigationComponent {
         this.highlightActiveLink();
       }
     });
+    window.addEventListener('scroll', () => {
+      this.highlightActiveLink();
+    });
+    this.highlightActiveLink();
   }
 
   toggleNav() {
@@ -34,31 +36,41 @@ export class NavigationComponent {
   checkWindowSize() {
     const screenWidth = window.innerWidth || 0;
     const breakpoint = 1199;
-    if (screenWidth <= breakpoint) {
-      this.showNav = false;
-    } else {
-      this.showNav = true;
-    }
+    this.showNav = screenWidth > breakpoint;
   }
 
-  scrollToComponent(componentId: string) {
-    const element = document.getElementById(componentId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  smoothScrollTo(targetId: string) {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth', // Animate scrolling
+        block: 'start', // Align element top with viewport top
+        inline: 'nearest' // Align element left/right with nearest viewport edge
+      });
     }
   }
   
-
   private highlightActiveLink() {
-    const currentRoute = this.router.url;
-    const links = document.querySelectorAll('#navbar .scrollto');
+    const links = this.elRef.nativeElement.querySelectorAll('#navbar .scrollto');
+    const scrollPosition = window.scrollY;
 
     links.forEach(link => {
-      const route = link.getAttribute('routerLink');
-      if (route && currentRoute.includes(route)) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
+      const routerLink = link.getAttribute('routerLink');
+      const targetId = routerLink.substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        const targetPosition = targetElement.offsetTop;
+        const offset = 100; // Adjust offset as needed
+
+        if (
+          scrollPosition >= targetPosition - offset &&
+          scrollPosition < targetPosition + targetElement.offsetHeight - offset
+        ) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
       }
     });
   }
