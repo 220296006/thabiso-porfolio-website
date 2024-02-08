@@ -77,18 +77,15 @@
       <section id="home">
         <div id="overlay"></div>
         <div class="image"></div>
-        <div class="image-container" data-aos="fade-in">
+        <div class="image-container" data-aos="fade-in" [@fadeInOut]="state" (@fadeInOut.done)="onAnimationDone($event)">
           <h1>Thabiso Matsaba</h1>
           <p>
             I'm
-            <span
-              class="typed"
-              id="typed"
-              data-typed-items=" a Software Developer, a Tech Geek, a Gamer"
-            ></span>
+            <span class="typed" id="typed" data-typed-items=" a Software Developer, a Tech Geek, a Gamer"></span>
           </p>
         </div>
       </section>
+      
       
 </body>
 </html>
