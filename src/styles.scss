@@ -3,6 +3,7 @@ body {
   color: #272829;
   transition: background-color 0.5s ease;
   margin-top: 17px;
+  scroll-behavior: smooth;
 }
 
 
@@ -29,9 +30,6 @@ h6 {
   font-family: "Roboto Mono", sans-serif;
 }
 
-section {
-  margin-top: -17px 
-}
 
 .section-bg {
   background-color: #f5f6f7;
@@ -167,4 +165,21 @@ section {
   form {
     max-width: 40rem;
   }
+}
+
+/* styles.scss */
+
+@keyframes fadeInOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply fadeInOut animation to components */
+:host-context(app-root) app-home,
+:host-context(app-root) app-about {
+  animation: fadeInOut 1s ease-in-out;
 }

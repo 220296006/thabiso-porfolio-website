@@ -7,9 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { AboutComponent } from './components/about/about.component';
 import { RouterModule } from '@angular/router';
-import { ScrollToDirective } from './ScrollToDirective';
-import { StoreModule } from '@ngrx/store';
-import { appReducer } from './app.reducer';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -18,13 +16,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     NavigationComponent,
     AboutComponent,
-    ScrollToDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    StoreModule.forRoot({ app: appReducer }),
     BrowserAnimationsModule
   ],
   providers: [],
