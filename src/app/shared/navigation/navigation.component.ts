@@ -57,7 +57,6 @@ export class NavigationComponent {
   const links = this.elRef.nativeElement.querySelectorAll('#navbar .scrollto');
   const scrollPosition = window.scrollY;
 
-  console.log('Scroll Position:', scrollPosition);
 
   links.forEach(link => {
     const routerLink = link.getAttribute('routerLink');
@@ -69,16 +68,10 @@ export class NavigationComponent {
       const targetTop = targetRect.top;
       const targetBottom = targetRect.bottom;
       const offset = 100; // Adjust offset as needed
-
-      console.log('Target Position:', targetTop);
-      console.log('Target Bottom:', targetBottom);
-
       if (
         targetTop <= scrollPosition + offset &&
         targetBottom >= scrollPosition + offset
       ) {
-        console.log('Scroll Position within range:', link.innerText);
-
         links.forEach((l: any) => l.classList.remove('active'));
         link.classList.add('active');
       }

@@ -1,9 +1,9 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   componentInView: boolean = false;
@@ -22,7 +22,6 @@ export class AppComponent implements OnInit {
       const element = document.querySelector(selector);
       if (element) {
         const isInView = this.isElementInViewport(element);
-        console.log(`Checking ${selector} - Is in view: ${isInView}`);
         if (isInView) {
           this.componentInView = true; // Set the flag to true if any component is in view
           return; // Exit the loop early if a component is found
@@ -34,7 +33,6 @@ export class AppComponent implements OnInit {
   isElementInViewport(element: Element | null): boolean {
     if (!element) return false;
     const rect = element.getBoundingClientRect();
-    console.log('Rect values:', rect); // Log the rect values
     return (
       rect.top <= window.innerHeight && // Check if top edge is visible
       rect.bottom >= 0 // Check if bottom edge is visible
