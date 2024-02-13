@@ -1,3 +1,19 @@
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.services.slide-in {
+  animation: slideFromRight 1s ease forwards;
+}
+
+
 section {
   padding: 100px 0;
   margin-left: 187px;
@@ -159,7 +175,7 @@ html {
     margin-left: 0;
     margin-right: 0;
   }
-  
+
   .row {
     margin-left: 0;
   }

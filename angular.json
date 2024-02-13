@@ -30,7 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/lightbox2/dist/css/lightbox.min.css"
             ],
             "scripts": []
           },
