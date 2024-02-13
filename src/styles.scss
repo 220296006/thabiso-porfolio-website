@@ -29,8 +29,6 @@ h5,
 h6 {
   font-family: "Roboto Mono", sans-serif;
 }
-
-
 .section-bg {
   background-color: #f5f6f7;
 }
@@ -74,8 +72,6 @@ h6 {
   }
 }
 
-/* Add this code to your global styles */
-
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -89,6 +85,7 @@ h6 {
     height: fit-content;
   }
 }
+
 
 @media screen and (max-width: 1200px) {
   #nav {
@@ -167,19 +164,3 @@ h6 {
   }
 }
 
-/* styles.scss */
-
-@keyframes fadeInOut {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Apply fadeInOut animation to components */
-:host-context(app-root) app-home,
-:host-context(app-root) app-about {
-  animation: fadeInOut 1s ease-in-out;
-}

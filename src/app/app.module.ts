@@ -1,3 +1,4 @@
+import { MatIconModule } from '@angular/material/icon';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { RouterModule } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServicesComponent } from './components/services/services.component';
 
 
 @NgModule({
@@ -17,12 +19,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     NavigationComponent,
     AboutComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [], 
    bootstrap: [AppComponent]

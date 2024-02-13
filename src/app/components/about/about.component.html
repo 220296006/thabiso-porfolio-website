@@ -9,8 +9,8 @@
 
 <body>
   <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-    <div class="page-header d-flex align-items-center animate-on-scroll" [@slideFromTop]>
+  <section id="about" class="about animate-on-scroll">
+    <div class="page-header d-flex align-items-center animate-on-scroll slideFromTop">
       <div class="container position-relative">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6 text-center">
@@ -26,11 +26,10 @@
     </div>
     <div class="container">
       <div class="row gy-4 justify-content-center">
-        <div class="col-lg-4 animate-on-scroll" [@slideFromLeft]>
-          <img src="assets/images/Thabiso.jpg" class="img-fluid" alt="Thabiso Matsaba"/>
+        <div class="col-lg-4 animate-on-scroll slideFromLeft">
+          <img src="assets/images/Thabiso.jpg" class="img-fluid" alt="Thabiso Matsaba" />
         </div>
-        <div class="col-lg-5 content animate-on-scroll" [@slideFromRight]>
-          <h2>Thabiso Patrick Matsaba</h2>
+        <div class="col-lg-5 content animate-on-scroll slideFromRight">
           <p class="fst-italic">
             I am a dedicated software developer with experience in various
             technologies and a strong passion for coding and problem-solving.
@@ -39,42 +38,33 @@
             <div class="col-lg-6">
               <ul>
                 <li>
-                  <img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAcFJREFUSEu11U2oTlEUBuDnIkVKpKRkYGJiICITSiKRGKtrIgMDAyYGokQyUkphKJkj8jPwO7gpPxMKAxFlhIHuRQktraN7j32+c246u77Jt9d+3/Wu9a51hvR8hnrGN1mCX5lQ53edAxO4F4Kt2IINWJxEr3ELV3FtUJkHKZiDCwk+CCMIhvG5FNREMA+PsQjfcQ6nEJnHCSX7sRvT8QbLSyRNBNexCe+wES8aJCzNUi3AFWyrx5UIVmMEP7AKT7ECh5IsMKL+R1PlWtxL4FAR8X9PieAIDuM09ib4A8yoZfcVa5LkInZkEsfaCB4laMh/jksl6QlyGduxDrfxEFGBooLK49XlVPzEWCH7KiZUzMRcfKwp/FOd8SWqE8zCaEeCiP3SRlDdVyWKxj7pWKLKGPF2ZVsPTuAAzmJPxyafx04cx8E2glgJYcOuNg0n3U/QaPbdNoIpGRQP36b3XzUM2jLcwHzcwXpM6GXTJC/EM8zGN5zBSbxPoiXYh12Yhk8IW3/oMslVTOybGKAJvi4oiSGMZRdq/zlt34O435y/2E3Vun6Zfbr5P+u6lFAvH5zxRL0TNJip+e+2HkwasP7gN5nfXxmJ3bi8AAAAAElFTkSuQmCC" />
-                  <span>41578 Ndyondyo Street, Makhaza Khayelitsha</span>
-                </li>
-                <li>
-                  <img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAd1JREFUSEvN1c+LTXEYx/HXmJL8KAtCUiaEEOPHQmEWlCQWlJXf8Q8oK1ZqVtixErEQi0kWFnYiSWKaiIj8KKIslGKB0KPn1pnjnsk5tynfuov7Pfd+3t/v8zyfz+kyyqtrlPVVAabjGn5hCz40PUg7wFTcwdwUfYG1TSFlQIjfwgK8TsBsPMe6JpAyIMqyGW+wJkt0E3MQNwnI+zrlKgN+oBuz8DaFoh838lZD6O0E8BmTMBFf2gDuY1UngEdYnJ/HKTSYp45n6/GxE8A57MNeXEihGNFpWI27dcTjt+Ue7MdZXMTOFDuPPTiBw50CYkzjxN8xA5+wAlH7b1iKp3Ug7Yw2gO3ox9EUO4MDOb47cC/340DXC47/a4TbAZbgYZ54JaK541N0UQpfwXGcxvLcCzP2lX1SlUUncSjdHIZ7l5BTOQTFKr3KLz3p+GGQKsC4jIyY+ZfYitbYLsvSbcMzbEhAmHFeGTJSXE/BbcxP0x3EpREaXHT8A0R5K+O6pTMZV7O2sXc5R7UVI0VeNDxyayH+GRACY1L0GMbiZ5Yrpi2SN1L3a4pHCg8LxTpvtJk4gt2YUFGqaHi8O2Io/qw6gNZ/4habsCuzKcoY6wk2FlK4MaCOkRvd4P8C/Aa9EWMZMtyNWQAAAABJRU5ErkJggg==" />
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAd1JREFUSEvN1c+LTXEYx/HXmJL8KAtCUiaEEOPHQmEWlCQWlJXf8Q8oK1ZqVtixErEQi0kWFnYiSWKaiIj8KKIslGKB0KPn1pnjnsk5tynfuov7Pfd+3t/v8zyfz+kyyqtrlPVVAabjGn5hCz40PUg7wFTcwdwUfYG1TSFlQIjfwgK8TsBsPMe6JpAyIMqyGW+wJkt0E3MQNwnI+zrlKgN+oBuz8DaFoh838lZD6O0E8BmTMBFf2gDuY1UngEdYnJ/HKTSYp45n6/GxE8A57MNeXEihGNFpWI27dcTjt+Ue7MdZXMTOFDuPPTiBw50CYkzjxN8xA5+wAlH7b1iKp3Ug7Yw2gO3ox9EUO4MDOb47cC/340DXC47/a4TbAZbgYZ54JaK541N0UQpfwXGcxvLcCzP2lX1SlUUncSjdHIZ7l5BTOQTFKr3KLz3p+GGQKsC4jIyY+ZfYitbYLsvSbcMzbEhAmHFeGTJSXE/BbcxP0x3EpREaXHT8A0R5K+O6pTMZV7O2sXc5R7UVI0VeNDxyayH+GRACY1L0GMbiZ5Yrpi2SN1L3a4pHCg8LxTpvtJk4gt2YUFGqaHi8O2Io/qw6gNZ/4habsCuzKcoY6wk2FlK4MaCOkRvd4P8C/Aa9EWMZMtyNWQAAAABJRU5ErkJggg==" />
                   <strong>Phone: </strong>
                   <span> 0836865724</span>
                 </li>
                 <li>
-                  <img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASNJREFUSEvt1UErBWEUxvHf3bOglJSdUnwJS1lLFlKKIgtlbXnLTlmIopQsJGtZ+hKUtZJSLNjT0YymMXPnXtNsbs7yzDnPc87/fXunpeFoNayvvwzm0cZkTWwP2MFV6GQR3WGqpnjafo/pvMFn8vUQG380yvZ+D5/dIDWI3CxOMdql0TNWcIOsTqHBID4whCMsVJhcYh1vGMB7Ul+6wSOWcZsULuIAwzmjV2ziIsnP4AzjVQapzgm2k4kCVSALdBGBIpAEmth4D6u5AUo3yNY9YQ3XSTJQRAS6iDkcY6wAY1cGad85thBYIgLXPpY6nE9PBqHzksEQ+EYqDr9ngy5v7E/Zv0ElsV+IGn/s4rnexUTlbJ0LSp/rmrrF7f31y2wE0RedUDYZOIKA5gAAAABJRU5ErkJggg==" />
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASNJREFUSEvt1UErBWEUxvHf3bOglJSdUnwJS1lLFlKKIgtlbXnLTlmIopQsJGtZ+hKUtZJSLNjT0YymMXPnXtNsbs7yzDnPc87/fXunpeFoNayvvwzm0cZkTWwP2MFV6GQR3WGqpnjafo/pvMFn8vUQG380yvZ+D5/dIDWI3CxOMdql0TNWcIOsTqHBID4whCMsVJhcYh1vGMB7Ul+6wSOWcZsULuIAwzmjV2ziIsnP4AzjVQapzgm2k4kCVSALdBGBIpAEmth4D6u5AUo3yNY9YQ3XSTJQRAS6iDkcY6wAY1cGad85thBYIgLXPpY6nE9PBqHzksEQ+EYqDr9ngy5v7E/Zv0ElsV+IGn/s4rnexUTlbJ0LSp/rmrrF7f31y2wE0RedUDYZOIKA5gAAAABJRU5ErkJggg==" />
                   <strong>Email: </strong>
                   <p> thabisomatsaba96@gmail.com</p>
                   <a href="mailto:thabisomatsaba96@gmail.com"></a>
                 </li>
                 <li>
-                  <img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAaxJREFUSEu11TtIV2EYx/GPUwpG4BQ2mBAIgUVzRC1Cl6nCQYgmkVokEZq60uwQQRCNgYNENBRB0BBCLQ5uqaXk4Cw0GXbjiXPo8HJumv93OZxznuf5nuf2O106fLo6HF8TYB8u4yyO4zB+4ysW8QYvsF31oXWAc3icBa1L9Auu4V2ZURXgHu7uoHy/cBMzqU8Z4D7u7CB40fQGHhYfpIALeFUTPLePPpSdyOQUPuQvi4BefMbB/wCE6zKG88YXAdezptZVpymD3PciXsZNEfAa5xtq3xbwFBMpYAP9ewSIHTmRArYQi9WmRLFoAzWGm+hLAd+wvwEwmG1xXOdxqMI+Yh1IAUsYagBEGU9iPdvwjxVT9wlHU8AsxlosWBFyJMskHe1nuJoCriBetDkBOY1VxMSMJ06jeJ4CehCp1TWvGCcgc5hKgq/gGL6ngLgfwds2KVTYhFScycr216RM7G7hwS4hk3hU9K2S69sIVW36IeWxfmI6VdKqDHKnUNYnNbOe28UPJ5r8vizrpi/sxqVMo6JxMQAh1WtYyPoVovajqqRNgF224p9bxwF/AHpHSxka6Vc7AAAAAElFTkSuQmCC" />
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAaxJREFUSEu11TtIV2EYx/GPUwpG4BQ2mBAIgUVzRC1Cl6nCQYgmkVokEZq60uwQQRCNgYNENBRB0BBCLQ5uqaXk4Cw0GXbjiXPo8HJumv93OZxznuf5nuf2O106fLo6HF8TYB8u4yyO4zB+4ysW8QYvsF31oXWAc3icBa1L9Auu4V2ZURXgHu7uoHy/cBMzqU8Z4D7u7CB40fQGHhYfpIALeFUTPLePPpSdyOQUPuQvi4BefMbB/wCE6zKG88YXAdezptZVpymD3PciXsZNEfAa5xtq3xbwFBMpYAP9ewSIHTmRArYQi9WmRLFoAzWGm+hLAd+wvwEwmG1xXOdxqMI+Yh1IAUsYagBEGU9iPdvwjxVT9wlHU8AsxlosWBFyJMskHe1nuJoCriBetDkBOY1VxMSMJ06jeJ4CehCp1TWvGCcgc5hKgq/gGL6ngLgfwds2KVTYhFScycr216RM7G7hwS4hk3hU9K2S69sIVW36IeWxfmI6VdKqDHKnUNYnNbOe28UPJ5r8vizrpi/sxqVMo6JxMQAh1WtYyPoVovajqqRNgF224p9bxwF/AHpHSxka6Vc7AAAAAElFTkSuQmCC" />
                   <strong>Birthday: </strong> <span> 22nd December 1996</span>
                 </li>
                 <li>
-                  <img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAGVJREFUSEtjZKAxYKSx+QzYLPgPtZQqlg+oBeSE3gEGBgZHZI34fECOBSA9KGaOWoAtGEeDiGDiGg0ivEG0h4GBwZXYnDz0C7tRH4DjGj0YYLUZLCFQHEx0t4BgOUCqAoqDgJCFAGu0FhkHn7YTAAAAAElFTkSuQmCC" />
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVxJREFUSEvt07FLVlEYx/GPkGCRY4KC0OgSDf4BLSKIS+GQg9AqSP0zLbXpYoKLi5sNgYRTTULkIoij2KAogijPy7lxuL73vecKTvXAgQvnd3/f8/zOeYY8cA09sL9/A/ASb/Aaj/E1W3/aIm6KKEzDMIzju6l2E2wH8X2nckCpaRMsusm7+x3CHHDT1m7H/Z53DpjGWyxisqNZLv+Cz/hWB+SiuQQL4EgB7ByfkvFBrm+bgzAPSKyA1ivM4rRhHpCBl1xt7mMTG/iV/RGxRXwBO0vGEUfUMBbwHjO4qP7r10F+2bH/EWH0vc8Bx7Cc1njaj1m57AKogIcJtI6nWEkdPaqB7w0ouOue5ElbRMeYSG5reFfqjFM8w/WgiOZTFKMdjCtp3Ee8qr/V9EyfYxWvCiFH+ICtur5tDl5gCbOYyobuBD/wE3vYxlXpHBQeukzW1kGZywDVf0BrhLdjpD4Z/bv/UAAAAABJRU5ErkJggg==" />
                   <strong>Nationality: </strong>
                   <p>South African</p>
                 </li>
                 <li>
-                  <img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVxJREFUSEvt07FLVlEYx/GPkGCRY4KC0OgSDf4BLSKIS+GQg9AqSP0zLbXpYoKLi5sNgYRTTULkIoij2KAogijPy7lxuL73vecKTvXAgQvnd3/f8/zOeYY8cA09sL9/A/ASb/Aaj/E1W3/aIm6KKEzDMIzju6l2E2wH8X2nckCpaRMsusm7+x3CHHDT1m7H/Z53DpjGWyxisqNZLv+Cz/hWB+SiuQQL4EgB7ByfkvFBrm+bgzAPSKyA1ivM4rRhHpCBl1xt7mMTG/iV/RGxRXwBO0vGEUfUMBbwHjO4qP7r10F+2bH/EWH0vc8Bx7Cc1njaj1m57AKogIcJtI6nWEkdPaqB7w0ouOue5ElbRMeYSG5reFfqjFM8w/WgiOZTFKMdjCtp3Ee8qr/V9EyfYxWvCiFH+ICtur5tDl5gCbOYyobuBD/wE3vYxlXpHBQeukzW1kGZywDVf0BrhLdjpD4Z/bv/UAAAAABJRU5ErkJggg==" />
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQdJREFUSEvt1r0uBUEUwPHfrZRqESqJhFZBrbmtRKH0BBJf0UiESBRXrfUA9BKNpyDUHkKiYSdZyVpjZ2evDYVT7pxz/udzZgd6lkHP/sUA6zjFfAJ+hJNUgDHAPRZShuX5Ps6bdGOAtxbOjxEyCNII6QoIdiPspSDjAILvJGRcQBLyE4A65JPProDWg/MPiJXqb/VgAtPYwAtuiw0Omx7m/xEXmMVdJZWsDKZwVW7sCpaxhFVs4QmbCGcfkgWYxA7WcBkB3GCI3a6AGTyXxtuVEoUbNET/WpTuoNbprAxaXKxfVH4fkPPg1MN/KIZisfrxuyfzDHOZ9Qk9OcR1CpDpt1m997+KdyzkNhkcUgbAAAAAAElFTkSuQmCC" />
                   <strong>Degree: </strong>
                   <p>National Diploma in ICT: Applications Development</p>
                 </li>
                 <li>
-                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQdJREFUSEvt1r0uBUEUwPHfrZRqESqJhFZBrbmtRKH0BBJf0UiESBRXrfUA9BKNpyDUHkKiYSdZyVpjZ2evDYVT7pxz/udzZgd6lkHP/sUA6zjFfAJ+hJNUgDHAPRZShuX5Ps6bdGOAtxbOjxEyCNII6QoIdiPspSDjAILvJGRcQBLyE4A65JPProDWg/MPiJXqb/VgAtPYwAtuiw0Omx7m/xEXmMVdJZWsDKZwVW7sCpaxhFVs4QmbCGcfkgWYxA7WcBkB3GCI3a6AGTyXxtuVEoUbNET/WpTuoNbprAxaXKxfVH4fkPPg1MN/KIZisfrxuyfzDHOZ9Qk9OcR1CpDpt1m997+KdyzkNhkcUgbAAAAAAElFTkSuQmCC"/>                  <strong>CV: </strong>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVxJREFUSEvt07FLVlEYx/GPkGCRY4KC0OgSDf4BLSKIS+GQg9AqSP0zLbXpYoKLi5sNgYRTTULkIoij2KAogijPy7lxuL73vecKTvXAgQvnd3/f8/zOeYY8cA09sL9/A/ASb/Aaj/E1W3/aIm6KKEzDMIzju6l2E2wH8X2nckCpaRMsusm7+x3CHHDT1m7H/Z53DpjGWyxisqNZLv+Cz/hWB+SiuQQL4EgB7ByfkvFBrm+bgzAPSKyA1ivM4rRhHpCBl1xt7mMTG/iV/RGxRXwBO0vGEUfUMBbwHjO4qP7r10F+2bH/EWH0vc8Bx7Cc1njaj1m57AKogIcJtI6nWEkdPaqB7w0ouOue5ElbRMeYSG5reFfqjFM8w/WgiOZTFKMdjCtp3Ee8qr/V9EyfYxWvCiFH+ICtur5tDl5gCbOYyobuBD/wE3vYxlXpHBQeukzW1kGZywDVf0BrhLdjpD4Z/bv/UAAAAABJRU5ErkJggg==" />
+                  <strong>CV: </strong>
                   <a href="../assets/resources/Thabiso Matsaba Resume.pdf"><i class="bx bx-file"></i> Download</a>
                 </li>
               </ul>
@@ -93,8 +83,8 @@
             knowledge to exciting projects.
           </p>
         </div>
-        </div>
       </div>
+    </div>
   </section>
 </body>
 

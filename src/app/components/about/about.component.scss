@@ -1,60 +1,109 @@
-   /* Add custom CSS here for styling */
-   .about{
-    height: 100vh;
-   }
-   
-   .page-header {
-    background-color: #343a40;
-    color: #ffffff;
-    padding: 21px;
-    text-align: center;
-  }
-
-  .img-fluid{
-    padding-left: 90px;
-    }
-  
-
-  p {
-    margin-top: 6px;
-    margin-bottom: 1rem;
+.about .animate-on-scroll {
+  opacity: 0;
 }
 
-h2{
+.about .active.slideFromTop {
+  animation: slideFromTop 1s ease forwards;
+}
+
+.about .active.slideFromLeft {
+  animation: slideFromLeft 1s ease forwards;
+}
+
+.about .active.slideFromRight {
+  animation: slideFromRight 1s ease forwards;
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.about {
+  height: 100vh;
+  margin-top: -17px;
+}
+
+.page-header {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 21px;
+  text-align: center;
+}
+
+.img-fluid {
+  padding-left: 90px;
+}
+
+p {
+  margin-top: 6px;
+  margin-bottom: 1rem;
+}
+
+h2 {
   color: #007bff;
 }
-  .cta-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    background-color: #007bff;
-    color: #ffffff;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-   
-   .content ul li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
 
-    .content ul li img {
-      margin-right: 10px;
-      width: 24px; /* Adjust icon size */
-    }
+.cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
 
-    .content ul li p {
-      margin: 0;
-    }
+.content ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
-    .img-container {
-      max-width: 100%;
-    }
+.content ul li img {
+  margin-right: 10px;
+  width: 24px; /* Adjust icon size */
+}
 
-    .img-container img {
-      width: 100%;
-      height: auto;
-    }
+.content ul li p {
+  margin: 0;
+}
+
+.img-container {
+  max-width: 100%;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+}

@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
   checkComponentsInView() {
     // Array of component selectors to query
-    const componentSelectors = ['app-home', 'app-about'];
+    const componentSelectors = ['app-home', 'app-about', 'app-services'];
 
     // Check if any of the components are in the viewport
     for (const selector of componentSelectors) {
