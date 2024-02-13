@@ -1,153 +1,176 @@
-.container{
-    margin-top: 166px;
+section {
+  padding: 100px 0;
+  margin-left: 187px;
+  margin-right: -14px;
 }
 
+.section-bg {
+  background-color: #f7fcfc;
+}
 
-section {
-    padding: 60px 0;
-    overflow: hidden;
-    margin-top:-151px;  
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #149ddd;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #3fbbc0;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+.services .icon-box {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.services .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  color: #3fbbc0;
+  overflow: hidden;
+  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.services .icon i {
+  font-size: 36px;
+  line-height: 0;
+}
+
+.services .icon-box:hover .icon {
+  box-shadow: 0px 0 25px rgba(63, 187, 192, 0.3);
+}
+
+.services .title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.services .title a {
+  color: #444444;
+  transition: 0.3s;
+}
+
+.services .title a:hover {
+  color: #3fbbc0;
+}
+
+.services .title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #3fbbc0;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.services .description {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#skills {
+  background-color: #f7fcfc;
+  padding: 60px 0;
+}
+
+#skills .icon-box {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#skills .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  color: #3fbbc0;
+  overflow: hidden;
+  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+#skills .icon img {
+  width: 40px;
+  height: 40px;
+}
+
+#skills .title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+#skills .title p {
+  color: #444444;
+  font-size: 14px;
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: 169px;
+}
+
+/* Media Queries */
+@media (max-width: 991.98px) {
+  section {
+    padding: 80px 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   
-  .section-bg {
-    background-color: #f7fcfc;
+  .row {
+    margin-left: 0;
   }
-  
-  .section-title {
-    text-align: center;
-    padding-bottom: 30px;
-  }
-  
-  .section-title h2 {
-    font-size: 28px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
-    color: #149ddd;
-  }
-  
-  .section-title h2::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: #3fbbc0;
-    bottom: 0;
-    left: calc(50% - 25px);
-  }
-  
-  .section-title p {
-    margin-bottom: 0;
-  }
-  
-  .services .icon-box {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .services .icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
-    background: #fff;
-    border-radius: 50%;
-    transition: 0.5s;
-    color: #3fbbc0;
-    overflow: hidden;
-    box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
-  }
-  
-  .services .icon i {
-    font-size: 36px;
-    line-height: 0;
-  }
-  
-  .services .icon-box:hover .icon {
-    box-shadow: 0px 0 25px rgba(63, 187, 192, 0.3);
-  }
-  
-  .services .title {
-    font-weight: 600;
-    margin-bottom: 15px;
-    font-size: 18px;
-    position: relative;
-    padding-bottom: 15px;
-  }
-  
-  .services .title a {
-    color: #444444;
-    transition: 0.3s;
-  }
-  
-  .services .title a:hover {
-    color: #3fbbc0;
-  }
-  
-  .services .title::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 2px;
-    background: #3fbbc0;
-    bottom: 0;
-    left: calc(50% - 25px);
-  }
-  
-  .services .description {
-    line-height: 24px;
-    font-size: 14px;
-  }
-  
-  html {
-    scroll-behavior: smooth;
+}
+
+@media (max-width: 767.98px) {
+  .row {
+    margin-left: 0;
   }
 
-  #skills {
-    background-color: #f7fcfc;
-    padding: 60px 0;
-  }
-
-  #skills .icon-box {
-    margin-bottom: 40px;
-    text-align: center;
-  }
-
-  #skills .icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
-    background: #fff;
-    border-radius: 50%;
-    transition: 0.5s;
-    color: #3fbbc0;
-    overflow: hidden;
-    box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
-  }
-
-  #skills .icon img {
-    width: 40px;
-    height: 40px;
-  }
-
-  #skills .title {
-    font-weight: 600;
-    margin-bottom: 15px;
-    font-size: 18px;
-    position: relative;
-    padding-bottom: 15px;
-  }
-
-  #skills .title p {
-    color: #444444;
-    font-size: 14px;
-  }
+  // .section-title h2 {
+  //   font-size: 18px;
+  // }
+}
