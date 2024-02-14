@@ -1,5 +1,6 @@
 .about .animate-on-scroll {
   opacity: 0;
+  animation: fadeIn 2s ease forwards; 
 }
 
 .about .active.slideFromTop {
@@ -47,8 +48,35 @@
   }
 }
 
+/* Adjust margins for smaller screens */
+@media screen and (max-width: 768px) {
+  .about .animate-on-scroll {
+    /* Adjust margin to create space between elements */
+    margin-bottom: 20px; /* Example margin */
+  }
+}
+
+/* Adjust keyframes for fadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Adjust initial position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Adjust final position */
+  }
+}
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .about .animate-on-scroll {
+    /* Adjust opacity and animation duration for smaller screens */
+    opacity: 1; /* Show element immediately */
+    animation-duration: 1s; /* Example shorter duration */
+  }
+}
+
 body {
-  margin: 100px;
   height: 100vh;
   border: 5px solid green;
 }
@@ -84,9 +112,6 @@ body {
   color: #007bff;
 }
 
-.row{
-  
-}
 .content p {
   color: #495057;
 }
@@ -136,6 +161,11 @@ body {
   margin: 0;
 }
 
+.img-fluid {
+  max-width: 100%; /* Ensure image does not exceed container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .about .page-header {
@@ -154,7 +184,7 @@ body {
 /* Media query for tablets */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .img-fluid {
-    padding-left: 45px;
+    padding-left: 15px;
   }
 }
 

@@ -9,13 +9,14 @@
   }
 }
 
-.services.slide-in {
-  animation: slideFromRight 1s ease forwards;
+.services{
+  margin-top: 0px;
+  margin-left: 115px;
+  margin-right: 2px;
 }
 
-body {
-  margin: 50px;
-  padding: 25px;
+.services.slide-in {
+  animation: slideFromRight 1s ease forwards;
 }
 
 .section-bg {
@@ -184,19 +185,58 @@ body {
   margin-top: 50px;
 }
 
-/* services.component.scss */
-@media (max-width: 767.98px) {
-  .button-container {
-    position: relative;
-    text-align: center;
-    margin-top: 10px; /* Adjust as needed */
+/* Media Queries */
+@media screen and (max-width: 767.98px) {
+  .services {
+    margin: 0 15px; /* Adjust margins for smaller screens */
   }
 
-  .find-out-more {
-    position: static;
-    display: inline-block;
+  .row {
+    margin: 0; /* Reset margin */
+  }
+
+  .row2 {
+    margin-top: 30px; /* Adjust margin for smaller screens */
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .services {
+    margin-left: 60px; /* Adjust left margin for tablets */
+  }
+
+  .row {
+    margin-left: 30px; /* Adjust left margin for tablets */
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .services {
+    margin-left: 115px; /* Adjust left margin for larger screens */
+    margin-right: 2px; /* Adjust right margin for larger screens */
+  }
+
+  .row {
+    margin-left: 106px; /* Adjust left margin for larger screens */
+  }
+}
+
+/* Adjust section padding for larger screens */
+@media screen and (min-width: 992px) {
+  section {
+    padding: 80px 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Adjust find-out-more button position for larger screens */
+@media screen and (min-width: 992px) {
+  .find-out-more {
+    bottom: -24px;
+  }
+}
+
 
 /* Adjust icon box styling */
 .icon-box {
@@ -269,6 +309,5 @@ body {
 
 body{
   border:#0056b3 solid;
-  margin: 100px;
   height: 100vh;
 }

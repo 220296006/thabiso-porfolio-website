@@ -1,166 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services</title>
-</head>
-
-<body>
-  <section id="services" class="services section-bg">
-    <div class="container">
-      <div class="section-title">
-        <h2>Services, Languages and Tools</h2>
-        <div class="title-underline"></div>
-        <p>I offer a range of professional services to meet your needs.</p>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6 icon-box ">
-          <div class="popup-link" (click)="showImage('https://s3-ap-south-1.amazonaws.com/trt-blog-ghost/2023/01/Mean-Tech-stack.png')">
-            <div class="icon"><mat-icon>code</mat-icon></div>
-            <h4 class="title">Front-End Development</h4>
-            <p class="description" [hidden]="!showDescription[0]">
-              {{ descriptions[0] }}
-            </p>
-      
-          <div class="button-container">
-            <button class="find-out-more" (click)="toggleDescription(0)">Find Out More</button>
+  <body>
+    <section id="services" class="services section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Services, Languages and Tools</h2>
+          <div class="title-underline"></div>
+          <p>I offer a range of professional services to meet your needs.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="popup-link">
+              <div class="icon" (click)="toggleDescription(0)">
+                <mat-icon >code</mat-icon>
+              </div>
+              <h4 class="title">Front-End Development</h4>
+              <p class="description" [hidden]="!showDescription[0]">
+                {{ descriptions[0] }}
+              </p>
+              <div class="button-container">
+                <button
+                  class="find-out-more"
+                  (click)="
+                    showImage(
+                      'https://s3-ap-south-1.amazonaws.com/trt-blog-ghost/2023/01/Mean-Tech-stack.png'
+                    )
+                  "
+                >
+                  Find Out More
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
-      
-        <div class="col-lg-4 col-md-6 icon-box">
-          <div class="popup-link" (click)="showImage('https://thetapacademy.com/wp-content/uploads/2023/03/skills-required-for-backend-developer-1024x768.png')">
-            <div class="icon"><mat-icon>build</mat-icon></div>
-            <h4 class="title">Back-End Development</h4>
-            <p class="description" [hidden]="!showDescription[1]">
-              {{ descriptions[1] }}
-            </p>
-            <div class="button-container">
-              <button class="find-out-more" (click)="toggleDescription(1)">Find Out More</button>
+
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="popup-link">
+              <div class="icon" (click)="toggleDescription(1)">
+                <mat-icon >build</mat-icon>
+              </div>
+              <h4 class="title">Back-End Development</h4>
+              <p class="description" [hidden]="!showDescription[1]">
+                {{ descriptions[1] }}
+              </p>
+              <div
+                class="button-container"
+                (click)="
+                  showImage(
+                    'https://thetapacademy.com/wp-content/uploads/2023/03/skills-required-for-backend-developer-1024x768.png'
+                  )
+                "
+              >
+                <button class="find-out-more">Find Out More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="popup-link">
+              <div class="icon" (click)="toggleDescription(2)">
+                <mat-icon >storage</mat-icon>
+              </div>
+              <h4 class="title">Database Management</h4>
+              <p class="description" [hidden]="!showDescription[2]">
+                {{ descriptions[2] }}
+              </p>
+              <div class="button-container">
+                <button
+                  class="find-out-more"
+                  (click)="
+                    showImage(
+                      'https://www.techopedia.com/wp-content/uploads/2011/06/dbms-image-1.png'
+                    )
+                  "
+                >
+                  Find Out More
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      
-        <div class="col-lg-4 col-md-6 icon-box">
-          <div class="popup-link" (click)="showImage('https://www.techopedia.com/wp-content/uploads/2011/06/dbms-image-1.png')">
-            <div class="icon"><mat-icon>storage</mat-icon></div>
-            <h4 class="title">Database Management</h4>
-            <p class="description" [hidden]="!showDescription[2]">
-              {{ descriptions[2] }}
-            </p>
-            <div class="button-container">
-              <button class="find-out-more" (click)="toggleDescription(2)">Find Out More</button>
+
+        <div class="row2">
+          <div class="row">
+            <div
+              class="col-lg-2 col-md-3 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <a href="https://angular.io" target="_blank" rel="noreferrer">
+                <img
+                  src="https://angular.io/assets/images/logos/angular/angular.svg"
+                  alt="angular"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <p>Angular</p>
+            </div>
+
+            <div
+              class="col-lg-2 col-md-3 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <a
+                href="https://getbootstrap.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+                  alt="bootstrap"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <p>Bootstrap</p>
+            </div>
+
+            <div
+              class="col-lg-2 col-md-3 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <a
+                href="https://www.w3schools.com/css/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+                  alt="css3"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <p>CSS3</p>
+            </div>
+
+            <div
+              class="col-lg-2 col-md-3 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              <a
+                href="https://www.w3.org/html/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+                  alt="html5"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <p>HTML5</p>
+            </div>
+
+            <div
+              class="col-lg-2 col-md-3 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+            >
+              <a href="https://www.java.com" target="_blank" rel="noreferrer">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                  alt="java"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <p>Java</p>
+            </div>
+
+            <div
+              class="col-lg-2 col-md-3 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="600"
+            >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                  alt="javascript"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <p>JavaScript</p>
+            </div>
+
+            <div
+              class="col-lg-2 col-md-3 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="700"
+            >
+              <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+                  alt="mysql"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <p>MySQL</p>
+            </div>
+
+            <div
+              class="col-lg-2 col-md-3 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="800"
+            >
+              <a href="https://nodejs.org" target="_blank" rel="noreferrer">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+                  alt="nodejs"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <p>Node.js</p>
+            </div>
+
+            <div
+              class="col-lg-2 col-md-3 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="900"
+            >
+              <a href="https://www.python.org" target="_blank" rel="noreferrer">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                  alt="python"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <p>Python</p>
+            </div>
+
+            <div
+              class="col-lg-2 col-md-3 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="1000"
+            >
+              <a href="https://spring.io/" target="_blank" rel="noreferrer">
+                <img
+                  src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg"
+                  alt="spring"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <p>Spring</p>
+            </div>
+
+            <div
+              class="col-lg-2 col-md-3 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="1100"
+            >
+              <a
+                href="https://www.typescriptlang.org/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+                  alt="typescript"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <p>TypeScript</p>
+            </div>
+
+            <div
+              class="col-lg-2 col-md-3 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="1100"
+            >
+              <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
+                <img
+                  src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+                  alt="git"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <p>Git</p>
             </div>
           </div>
         </div>
       </div>
-      
-      <div class="row2">
-      <div class="row">
-        <div class="col-lg-2 col-md-3 icon-box" data-aos="zoom-in" data-aos-delay="100">
-          <a href="https://angular.io" target="_blank" rel="noreferrer">
-            <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40"
-              height="40" />
-          </a>
-          <p>Angular</p>
-        </div>
-
-        <div class="col-lg-2 col-md-3 icon-box" data-aos="zoom-in" data-aos-delay="200">
-          <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
-              alt="bootstrap" width="40" height="40" />
-          </a>
-          <p>Bootstrap</p>
-        </div>
-
-        <div class="col-lg-2 col-md-3 icon-box" data-aos="zoom-in" data-aos-delay="300">
-          <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-              alt="css3" width="40" height="40" />
-          </a>
-          <p>CSS3</p>
-        </div>
-
-        <div class="col-lg-2 col-md-3 icon-box" data-aos="zoom-in" data-aos-delay="400">
-          <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-              alt="html5" width="40" height="40" />
-          </a>
-          <p>HTML5</p>
-        </div>
-
-        <div class="col-lg-2 col-md-3 icon-box" data-aos="zoom-in" data-aos-delay="500">
-          <a href="https://www.java.com" target="_blank" rel="noreferrer">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java"
-              width="40" height="40" />
-          </a>
-          <p>Java</p>
-        </div>
-
-        <div class="col-lg-2 col-md-3 icon-box" data-aos="zoom-in" data-aos-delay="600">
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-              alt="javascript" width="40" height="40" />
-          </a>
-          <p>JavaScript</p>
-        </div>
-
-        <div class="col-lg-2 col-md-3 icon-box" data-aos="zoom-in" data-aos-delay="700">
-          <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
-              alt="mysql" width="40" height="40" />
-          </a>
-          <p>MySQL</p>
-        </div>
-
-        <div class="col-lg-2 col-md-3 icon-box" data-aos="zoom-in" data-aos-delay="800">
-          <a href="https://nodejs.org" target="_blank" rel="noreferrer">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
-              alt="nodejs" width="40" height="40" />
-          </a>
-          <p>Node.js</p>
-        </div>
-
-        <div class="col-lg-2 col-md-3 icon-box" data-aos="zoom-in" data-aos-delay="900">
-          <a href="https://www.python.org" target="_blank" rel="noreferrer">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-              alt="python" width="40" height="40" />
-          </a>
-          <p>Python</p>
-        </div>
-
-        <div class="col-lg-2 col-md-3 icon-box" data-aos="zoom-in" data-aos-delay="1000">
-          <a href="https://spring.io/" target="_blank" rel="noreferrer">
-            <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40"
-              height="40" />
-          </a>
-          <p>Spring</p>
-        </div>
-
-        <div class="col-lg-2 col-md-3 icon-box" data-aos="zoom-in" data-aos-delay="1100">
-          <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
-            <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-              alt="typescript" width="40" height="40" />
-          </a>
-          <p>TypeScript</p>
-        </div>
-
-        <div class="col-lg-2 col-md-3 icon-box" data-aos="zoom-in" data-aos-delay="1100">
-          <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-            <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40" />
-          </a>
-          <p>Git</p>
-        </div>
-      </div>
-</div>
-    </div>
-  </section>
-</body>
-
+    </section>
+  </body>
 </html>

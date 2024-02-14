@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
         const isInView = this.isElementInViewport(element);
         if (isInView) {
           this.componentInView = true; // Set the flag to true if any component is in view
+          console.log(isInView)
           return; // Exit the loop early if a component is found
         }
       }
@@ -33,6 +34,7 @@ export class AppComponent implements OnInit {
   isElementInViewport(element: Element | null): boolean {
     if (!element) return false;
     const rect = element.getBoundingClientRect();
+    console.log(rect)
     return (
       rect.top <= window.innerHeight && // Check if top edge is visible
       rect.bottom >= 0 // Check if bottom edge is visible
