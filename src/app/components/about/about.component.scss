@@ -48,11 +48,8 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
   margin: 50px;
   padding: 25px;
-  box-sizing: border-box;
-  background-color: #f8f9fa;
 }
 
 .page-header {
@@ -86,6 +83,9 @@ body {
   color: #007bff;
 }
 
+.row{
+  
+}
 .content p {
   color: #495057;
 }

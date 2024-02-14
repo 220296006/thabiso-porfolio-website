@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <section id="services" class="services section-bg" data-aos="fade-up">
+    <section id="services" class="services section-bg">
       <div class="container">
         <div class="section-title">
           <h2>Services, Languages and Tools</h2>
@@ -16,48 +16,62 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://s3-ap-south-1.amazonaws.com/trt-blog-ghost/2023/01/Mean-Tech-stack.png" data-lightbox="development" data-title="Front-End Development">
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="popup-link" (click)="toggleDescription(1)">
               <div class="icon"><mat-icon>code</mat-icon></div>
               <h4 class="title">Front-End Development</h4>
-              <p class="description">
-                I specialize in creating intuitive and responsive user interfaces.
-                From building interactive web applications to crafting visually
-                appealing websites, I ensure a seamless user experience on the
-                front end.
+              <p class="description" [hidden]="!showDescription[1]">
+                I specialize in creating intuitive and responsive user
+                interfaces. From building interactive web applications to
+                crafting visually appealing websites, I ensure a seamless user
+                experience on the front end.
               </p>
-            </a>
+              <a
+                href="https://s3-ap-south-1.amazonaws.com/trt-blog-ghost/2023/01/Mean-Tech-stack.png"
+                class="find-out-more"
+                *ngIf="showDescription[1]"
+                >Find Out More</a
+              >
+            </div>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="200">
-            <a href="https://thetapacademy.com/wp-content/uploads/2023/03/skills-required-for-backend-developer-1024x768.png" data-lightbox="development" data-title="Back-End Development">
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="popup-link" (click)="toggleDescription(2)">
               <div class="icon"><mat-icon>build</mat-icon></div>
               <h4 class="title">Back-End Development</h4>
-              <p class="description">
+              <p class="description" [hidden]="!showDescription[2]">
                 My expertise extends to server-side development, where I design
                 and implement robust APIs and backend systems. I focus on
-                performance, security, and scalability to power your applications.
+                performance, security, and scalability to power your
+                applications.
               </p>
-            </a>
+              <a
+                href="https://thetapacademy.com/wp-content/uploads/2023/03/skills-required-for-backend-developer-1024x768.png"
+                class="popup-link"
+                data-title="Back-End Development"
+                class="find-out-more"
+                *ngIf="showDescription[1]"
+                >Find Out More</a
+              >
+            </div>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="300">
-            <a href="https://www.techopedia.com/wp-content/uploads/2011/06/dbms-image-1.png" data-lightbox="development" data-title="Database Management">
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="popup-link" (click)="toggleDescription(3)">
               <div class="icon"><mat-icon>storage</mat-icon></div>
               <h4 class="title">Database Management</h4>
-              <p class="description">
+              <p class="description" [hidden]="!showDescription[3]">
                 Efficient data management is crucial. I handle databases with
                 precision, optimizing queries, ensuring data integrity, and
                 utilizing the right database solutions for your application's
                 needs.
               </p>
-            </a>
+              <a
+                href="https://s3-ap-south-1.amazonaws.com/trt-blog-ghost/2023/01/Mean-Tech-stack.png"
+                class="find-out-more"
+                *ngIf="showDescription[1]"
+                >Find Out More</a
+              >
+            </div>
           </div>
-        </div>
-        
-
-        <div class="section-title">
-          <div class="title">
-          <p>Here are some of the languages and tools I'm proficient in:</p>
-        </div>
         </div>
 
         <div class="row">
@@ -265,7 +279,7 @@
             <p>Git</p>
           </div>
         </div>
-        </div>
+      </div>
     </section>
   </body>
 </html>

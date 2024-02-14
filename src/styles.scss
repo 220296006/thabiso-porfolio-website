@@ -29,24 +29,3 @@ h5,
 h6 {
   font-family: "Roboto Mono", sans-serif;
 }
-
-/* Override for small screens */
-@media (max-width: 767.98px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 18px; /* Adjust font size for better readability */
-  }
-}
-
-/* Adjustments for sections */
-.about {
-  padding-bottom: 50px; /* Add some bottom padding to the about section */
-}
-
-#services {
-  margin-top: -121px; /* Add top margin to the services section */
-}

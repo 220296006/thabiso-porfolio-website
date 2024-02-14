@@ -39,7 +39,7 @@
 /* Style the title */
 #home h1 {
   margin: 0 0 10px 0;
-  font-size: 50px;
+  font-size: 61px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
@@ -48,13 +48,13 @@
 /* Style the paragraph text */
 #home p {
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   font-size: 26px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Mono", sans-serif;
 }
 
 /* Style the typed text */
-#home p span.typed {
+#home p span {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
@@ -62,43 +62,23 @@
 }
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (m-width: 1024px) {
+  #home  {
+    background-attachment: fixed;
+  }
+}
+
+/* Media query for tablets */
+@media (max-width-width: 768px) {
   #home h1 {
     font-size: 28px;
     line-height: 36px;
   }
 
-  #home p {
+  #home h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
 }
 
-/* Media query for tablets */
-@media (min-width: 769px) and (max-width: 1024px) {
-  #home h1 {
-    font-size: 40px;
-    line-height: 48px;
-  }
-
-  #home p {
-    font-size: 22px;
-    line-height: 30px;
-    margin-bottom: 30px;
-  }
-}
-
-/* Media query for larger screens */
-@media (min-width: 1025px) {
-  #home h1 {
-    font-size: 60px;
-    line-height: 68px;
-  }
-
-  #home p {
-    font-size: 28px;
-    line-height: 36px;
-    margin-bottom: 30px;
-  }
-}

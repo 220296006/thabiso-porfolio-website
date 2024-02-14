@@ -7,7 +7,7 @@ header {
     overflow-y: auto;
     background-color: #111; /* Adjust the background color as needed */
     padding: 15px; /* Adjust the padding as needed */
-    z-index: 100; /* Ensure navigation is above other content */
+    z-index: 9997; /* Ensure navigation is above other content */
     transition: left 0.3s;
 
     left: -100%; 

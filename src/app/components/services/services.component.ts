@@ -19,4 +19,10 @@ export class ServicesComponent {
       this.renderer.addClass(servicesElement, 'slide-in');
     }
   }
+
+   showDescription: boolean[] = [false, false, false, false]; // Initialize an array to track the visibility of descriptions
+
+  toggleDescription(index: number) {
+    this.showDescription[index] = !this.showDescription[index]; // Toggle the visibility of the description based on index
+  }
 }

@@ -13,12 +13,11 @@
   animation: slideFromRight 1s ease forwards;
 }
 
-
-section {
-  padding: 100px 0;
-  margin-left: 187px;
-  margin-right: -14px;
+body {
+  margin: 50px;
+  padding: 25px;
 }
+
 
 .section-bg {
   background-color: #f7fcfc;
@@ -116,10 +115,6 @@ section {
   font-size: 14px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 #skills {
   background-color: #f7fcfc;
   padding: 60px 0;
@@ -165,7 +160,8 @@ html {
 
 .row {
   margin-right: 0px;
-  margin-left: 169px;
+  margin-left: 106px;
+  
 }
 
 /* Media Queries */
@@ -185,8 +181,57 @@ html {
   .row {
     margin-left: 0;
   }
+}
+/* Customize icon box */
+.icon-box {
+  position: relative; /* Set position to relative */
+}
 
-  // .section-title h2 {
-  //   font-size: 18px;
-  // }
+/* Customize icon */
+.icon {
+  font-size: 48px; /* Increase icon size */
+  color: #007bff; /* Blue color */
+}
+
+/* Customize title */
+.title {
+  margin-top: 20px; /* Add space between icon and title */
+  font-size: 24px; /* Increase title font size */
+  color: #343a40; /* Dark grey color */
+}
+
+/* Customize description */
+.description {
+  position: absolute; /* Position the description absolutely */
+  bottom: -100%; /* Hide the description by default */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  color: #fff; /* White text color */
+  padding: 20px; /* Add padding */
+  transition: bottom 0.3s ease; /* Smooth transition */
+}
+
+/* Show description on hover */
+.icon-box:hover .description {
+  bottom: 0; /* Move the description up on hover */
+}
+
+/* Show find out more link */
+.find-out-more {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Add padding */
+  border-radius: 5px; /* Add border radius */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Change background color on hover */
+.find-out-more:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
