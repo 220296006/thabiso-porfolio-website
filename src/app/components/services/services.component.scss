@@ -18,7 +18,6 @@ body {
   padding: 25px;
 }
 
-
 .section-bg {
   background-color: #f7fcfc;
 }
@@ -160,31 +159,68 @@ body {
 
 .row {
   margin-right: 0px;
+  padding-top: 32px;
   margin-left: 106px;
-  
 }
 
 /* Media Queries */
-@media (max-width: 991.98px) {
+@media (min-width: 991px) {
   section {
     padding: 80px 0;
     margin-left: 0;
     margin-right: 0;
   }
 
+  .find-out-more {
+    bottom: -24px;
+  }
+
   .row {
     margin-left: 0;
   }
 }
 
+.row2{
+  margin-top: 50px;
+}
+
+/* services.component.scss */
 @media (max-width: 767.98px) {
-  .row {
-    margin-left: 0;
+  .button-container {
+    position: relative;
+    text-align: center;
+    margin-top: 10px; /* Adjust as needed */
+  }
+
+  .find-out-more {
+    position: static;
+    display: inline-block;
   }
 }
-/* Customize icon box */
+
+/* Adjust icon box styling */
 .icon-box {
-  position: relative; /* Set position to relative */
+  position: relative;
+  text-align: center; 
+}
+
+/* Update iframe styling */
+.icon-box iframe {
+  width: 100%; /* Set iframe width to 100% */
+  height: 100%; /* Set iframe height to 100% */
+}
+
+/* Update close button styling */
+.icon-box .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
 }
 
 /* Customize icon */
@@ -202,25 +238,20 @@ body {
 
 /* Customize description */
 .description {
-  position: absolute; /* Position the description absolutely */
-  bottom: -100%; /* Hide the description by default */
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-  color: #fff; /* White text color */
-  padding: 20px; /* Add padding */
-  transition: bottom 0.3s ease; /* Smooth transition */
+  line-height: 24px;
+  font-size: 14px;
+  margin-top: 10px; /* Add margin to separate description from title */
 }
 
 /* Show description on hover */
 .icon-box:hover .description {
-  bottom: 0; /* Move the description up on hover */
+  visibility: visible; /* Make description visible on hover */
 }
 
 /* Show find out more link */
 .find-out-more {
   position: absolute;
-  bottom: 20px;
+  bottom: -53px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #007bff; /* Blue background color */
@@ -234,4 +265,8 @@ body {
 /* Change background color on hover */
 .find-out-more:hover {
   background-color: #0056b3; /* Darker blue on hover */
+}
+
+body{
+  border:#0056b3 solid
 }
