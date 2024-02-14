@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServicesComponent } from './components/services/services.component';
 import { ImageModalComponent } from './components/image-modal/image-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     RouterModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   providers: [], 
    bootstrap: [AppComponent]

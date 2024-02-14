@@ -77,16 +77,18 @@
 }
 
 body {
-  height: 100vh;
-  border: 5px solid green;
+  margin: 0px;
+  padding: 25px;
+  box-sizing: content-box;
+  background-color: #f8f9fa;
+  border: #007bff solid;
+  position: relative;
 }
 
 .page-header {
   background-color: #343a40;
   color: #ffffff;
   padding: 40px 0;
-  margin-left: -76px;
-  margin-right: -76px;
 }
 
 .cta-btn {
@@ -105,7 +107,7 @@ body {
 }
 
 .about {
-  margin-top: -75px;
+  padding: 60px 0;
 }
 
 .content h2 {
@@ -159,38 +161,4 @@ body {
 
 .m-0 {
   margin: 0;
-}
-
-.img-fluid {
-  max-width: 100%; /* Ensure image does not exceed container width */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-  .about .page-header {
-    padding: 14px;
-  }
-
-  .img-fluid {
-    padding-left: 0;
-  }
-
-  .content {
-    padding: 0 15px;
-  }
-}
-
-/* Media query for tablets */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .img-fluid {
-    padding-left: 15px;
-  }
-}
-
-/* Media query for larger screens */
-@media screen and (min-width: 1025px) {
-  .img-fluid {
-    padding-left: 90px;
-  }
 }

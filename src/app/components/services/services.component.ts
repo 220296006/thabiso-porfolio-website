@@ -38,8 +38,8 @@ export class ServicesComponent {
   showImage(imageSrc: string) {
     this.dialog.open(ImageModalComponent, {
       data: { imageSrc }, // Corrected to pass image source as an object
-      width: '80%',
-      height: '80%',
+      width: '90%',
+      height: '90%',
     });
   }
 }

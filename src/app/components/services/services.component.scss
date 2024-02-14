@@ -9,18 +9,13 @@
   }
 }
 
-.services{
-  margin-top: 0px;
-  margin-left: 115px;
-  margin-right: 2px;
-}
-
 .services.slide-in {
   animation: slideFromRight 1s ease forwards;
 }
 
 .section-bg {
   background-color: #f7fcfc;
+  margin-top: 113px;
 }
 
 .section-title {
@@ -164,77 +159,8 @@
   margin-left: 106px;
 }
 
-/* Media Queries */
-@media (min-width: 991px) {
-  section {
-    padding: 80px 0;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .find-out-more {
-    bottom: -24px;
-  }
-
-  .row {
-    margin-left: 0;
-  }
-}
-
 .row2{
-  margin-top: 50px;
-}
-
-/* Media Queries */
-@media screen and (max-width: 767.98px) {
-  .services {
-    margin: 0 15px; /* Adjust margins for smaller screens */
-  }
-
-  .row {
-    margin: 0; /* Reset margin */
-  }
-
-  .row2 {
-    margin-top: 30px; /* Adjust margin for smaller screens */
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .services {
-    margin-left: 60px; /* Adjust left margin for tablets */
-  }
-
-  .row {
-    margin-left: 30px; /* Adjust left margin for tablets */
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .services {
-    margin-left: 115px; /* Adjust left margin for larger screens */
-    margin-right: 2px; /* Adjust right margin for larger screens */
-  }
-
-  .row {
-    margin-left: 106px; /* Adjust left margin for larger screens */
-  }
-}
-
-/* Adjust section padding for larger screens */
-@media screen and (min-width: 992px) {
-  section {
-    padding: 80px 0;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-/* Adjust find-out-more button position for larger screens */
-@media screen and (min-width: 992px) {
-  .find-out-more {
-    bottom: -24px;
-  }
+  margin-top: 70px;
 }
 
 
@@ -307,7 +233,12 @@
   background-color: #0056b3; /* Darker blue on hover */
 }
 
+
 body{
-  border:#0056b3 solid;
-  height: 100vh;
+  border:#f1f507 solid;
+  min-height: 100vh;
+  box-sizing: content-box;
+}
+
+section {
 }
