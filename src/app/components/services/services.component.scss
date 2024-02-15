@@ -16,6 +16,7 @@
 .section-bg {
   background-color: #f7fcfc;
   margin-top: 113px;
+  align-content: center;
 }
 
 .section-title {
@@ -159,41 +160,16 @@
   margin-left: 106px;
 }
 
-.row2{
-  margin-top: 70px;
-}
-
-
 /* Adjust icon box styling */
 .icon-box {
   position: relative;
   text-align: center; 
 }
 
-/* Update iframe styling */
-.icon-box iframe {
-  width: 100%; /* Set iframe width to 100% */
-  height: 100%; /* Set iframe height to 100% */
+.row2 {
+  margin-top: 70px;
 }
 
-/* Update close button styling */
-.icon-box .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(255, 255, 255, 0.8);
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-/* Customize icon */
-.icon {
-  font-size: 48px; /* Increase icon size */
-  color: #007bff; /* Blue color */
-}
 
 /* Customize title */
 .title {
@@ -209,30 +185,59 @@
   margin-top: 10px; /* Add margin to separate description from title */
 }
 
-/* Show description on hover */
-.icon-box:hover .description {
-  visibility: visible; /* Make description visible on hover */
-}
+
 
 /* Show find out more link */
 .find-out-more {
   position: absolute;
-  bottom: -53px;
+  bottom: -50px; /* Adjust the vertical position as needed */
   left: 50%;
   transform: translateX(-50%);
   background-color: #007bff; /* Blue background color */
   color: #fff; /* White text color */
-  padding: 10px 20px; /* Add padding */
+  padding: 0px 20px; /* Add padding */
   border-radius: 5px; /* Add border radius */
   text-decoration: none; /* Remove underline */
   transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-/* Change background color on hover */
-.find-out-more:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
 
+@media (max-width: 768px) {
+
+  .row {
+  margin-right: 100px;
+  }
+
+  .row .icon-box {
+    flex: 0 0 100%; /* Display two icons per row on small screens */
+    max-width: 100%; /* Limit icon box width to 50% of the container */
+  }
+
+  .row2 .row .icon-box{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .button-container {
+    position: relative; /* Make the container relatively positioned */
+    margin-top: 10px; /* Add margin to separate button from icon */
+  }
+
+  .row .icon-box .button-container {
+    position: relative; /* Change position to relative for button alignment */
+    margin-top: 10px; /* Add margin to separate button from icon */
+  }
+
+  .row .icon-box .button-container .find-out-more {
+    position: relative; /* Change position to relative for button alignment */
+    bottom: auto; /* Remove absolute positioning */
+    left: auto; /* Remove absolute positioning */
+    transform: none; /* Remove transform */
+    margin-top: 10px; /* Add margin to separate button from icon */
+    display: inline-block; /* Ensure button is displayed as an inline-block element */
+    text-align: center; /* Center-align the button */
+  }
+}
 
 body{
   border:#f1f507 solid;
@@ -240,5 +245,132 @@ body{
   box-sizing: content-box;
 }
 
-section {
+.testimonials {
+  background-color: #f4f4f4;
+  padding: 150px 0;
+  text-align: center;
+}
+
+.section-title h2 {
+  color: #149ddd;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.section-title p {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.testimonial-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 15px;
+  width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-img {
+  width: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.quote-icon-left,
+.quote-icon-right {
+  color: #149ddd;
+  font-size: 24px;
+}
+
+.quote-icon-left {
+  margin-right: 5px;
+}
+
+.quote-icon-right {
+  margin-left: 5px;
+}
+
+p {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #111;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+h4 {
+  color: #999;
+  font-size: 16px;
+  margin: 0;
+}
+
+pagination button.active {
+  background-color: #0c7bb3; /* Updated color for the active button */
+  font-size: 18px; /* Updated font size for the active button */
+  font-weight: bold; /* Optional: Add bold font weight */
+}
+
+/* Rest of your existing styles */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    background-color: #149ddd;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for a smoother effect */
+
+    &:hover {
+      background-color: #0c7bb3;
+    }
+  }
+
+  span {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border: 1px solid #149ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+
+    &.active {
+      background-color: #149ddd;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials-container {
+    justify-content: space-around;
+
+    .testimonial-item {
+      width: calc(50% - 30px);
+    }
+  }
 }

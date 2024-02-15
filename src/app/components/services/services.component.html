@@ -303,5 +303,34 @@
         </div>
       </div>
     </section>
+
+     <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>
+            Check out below what the people I have met and collaborated with
+            have to say about me
+          </p>
+        </div>
+        <div class="testimonials-container" >
+          <div *ngFor="let testimonial of testimonials; let i = index">
+            <div *ngIf="i === selectedIndex">
+              <img [src]="testimonial.image" class="testimonial-img" alt="">
+              <h3>{{ testimonial.name }}</h3>
+              <h4>{{ testimonial.designation }}</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                {{ testimonial.quote }}
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="pagination">
+          <span *ngFor="let testimonial of testimonials; let i = index" (click)="selectedIndex = i" [class.active]="i === selectedIndex"></span>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

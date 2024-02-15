@@ -67,6 +67,15 @@
     transform: translateY(0); /* Adjust final position */
   }
 }
+@media screen and (max-width: 768px) {
+  .about .animate-on-scroll {
+    /* Center-align content */
+    text-align: center;
+    /* Adjust margin to create space between elements */
+    margin-bottom: 20px; /* Example margin */
+  }
+}
+
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .about .animate-on-scroll {
@@ -76,19 +85,20 @@
   }
 }
 
+
 body {
-  margin: 0px;
-  padding: 25px;
   box-sizing: content-box;
   background-color: #f8f9fa;
-  border: #007bff solid;
   position: relative;
+  margin-right: -177px;
 }
 
 .page-header {
   background-color: #343a40;
   color: #ffffff;
   padding: 40px 0;
+  margin-left: -25px;
+  margin-right: -26px;
 }
 
 .cta-btn {
@@ -106,9 +116,7 @@ body {
   background-color: #0056b3;
 }
 
-.about {
-  padding: 60px 0;
-}
+
 
 .content h2 {
   color: #007bff;
@@ -162,3 +170,4 @@ body {
 .m-0 {
   margin: 0;
 }
+
