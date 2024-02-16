@@ -48,13 +48,6 @@
   }
 }
 
-/* Adjust margins for smaller screens */
-@media screen and (max-width: 768px) {
-  .about .animate-on-scroll {
-    /* Adjust margin to create space between elements */
-    margin-bottom: 20px; /* Example margin */
-  }
-}
 
 /* Adjust keyframes for fadeIn animation */
 @keyframes fadeIn {
@@ -67,30 +60,47 @@
     transform: translateY(0); /* Adjust final position */
   }
 }
+
 @media screen and (max-width: 768px) {
+  /* Center-align content */
   .about .animate-on-scroll {
-    /* Center-align content */
-    text-align: center;
-    /* Adjust margin to create space between elements */
-    margin-bottom: 20px; /* Example margin */
+    opacity: 1;
+    animation-duration: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15px; /* Adjust margin for smaller screens */
+    margin-right: 15px; /* Adjust margin for smaller screens */
+  }
+
+  /* Adjust margin for smaller screens */
+  .about .container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  /* Adjust margin for smaller screens */
+  .about .content {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  /* Adjust margin for smaller screens */
+  .about .content .row {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-  .about .animate-on-scroll {
-    /* Adjust opacity and animation duration for smaller screens */
-    opacity: 1; /* Show element immediately */
-    animation-duration: 1s; /* Example shorter duration */
-  }
-}
+
 
 
 body {
   box-sizing: content-box;
   background-color: #f8f9fa;
   position: relative;
-  margin-right: -177px;
+  margin-right: -280px;
+  border: #0056b3 solid;
 }
 
 .page-header {

@@ -54,29 +54,31 @@ export class NavigationComponent {
   }
 
   private highlightActiveLink() {
-  const links = this.elRef.nativeElement.querySelectorAll('#navbar .scrollto');
-  const scrollPosition = window.scrollY;
-
-
-  links.forEach(link => {
-    const routerLink = link.getAttribute('routerLink');
-    const targetId = routerLink.substring(1);
-    const targetElement = document.getElementById(targetId);
-    
-    if (targetElement) {
-      const targetRect = targetElement.getBoundingClientRect();
-      const targetTop = targetRect.top;
-      const targetBottom = targetRect.bottom;
-      const offset = 100; // Adjust offset as needed
-      if (
-        targetTop <= scrollPosition + offset &&
-        targetBottom >= scrollPosition + offset
-      ) {
-        links.forEach((l: any) => l.classList.remove('active'));
-        link.classList.add('active');
+    const links = this.elRef.nativeElement.querySelectorAll('#navbar .scrollto');
+    const scrollPosition = window.scrollY;
+  
+    links.forEach(link => {
+      const routerLink = link.getAttribute('routerLink');
+      const targetId = routerLink.substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        const targetRect = targetElement.getBoundingClientRect();
+        const targetTop = targetRect.top + window.pageYOffset;
+        const targetBottom = targetRect.bottom + window.pageYOffset;
+        const offset = 100; // Adjust offset as needed
+        
+        if (
+          targetTop <= scrollPosition + offset &&
+          targetBottom >= scrollPosition + offset
+        ) {
+          // Remove active class from all links
+          links.forEach((l: any) => l.classList.remove('active'));
+          // Add active class to the current link
+          link.classList.add('active');
+        }
       }
-    }
-  });
-}
+    });
+  }  
 
 }

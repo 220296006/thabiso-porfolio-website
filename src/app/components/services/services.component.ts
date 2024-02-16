@@ -82,13 +82,6 @@ export class ServicesComponent {
       name: 'Luvo Ntshwela',
       designation: 'Junior Software Developer, Entelect',
     },
-    {
-      quote:
-        'Without a doubt, Thabiso is one of the talented programmers, trustworthy, and professional. His advice has helped me grow in the field.',
-      image: 'assets/images/Vuyo.jpg',
-      name: 'Vuyolwethu Mfidi',
-      designation: 'Junior Software Developer, Uvu Africa:CapaCiti',
-    },
   ];
 
   selectedIndex = 0;

@@ -1,6 +1,6 @@
 #home {
   width: 100%;
-  height: 104vh;
+  height: 106vh;
   position: relative;
   background-image: url("/assets/images/Shaun.jpg");
   background-size: contain;
@@ -64,25 +64,26 @@
 /* Media query for smaller screens */
 @media (m-width: 1024px) {
   #home  {
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
 }
 
 /* Media query for tablets */
 @media (max-width-width: 768px) {
   #home h1 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 3px;
+    line-height: 10px;
   }
 
   #home h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
+    font-size: 4px;
+    line-height: 8px;
+    margin-bottom: 10px;
   }
 }
 
 body {
   position: relative;
   height: 100vh;
+  margin-right: -70px
 }
