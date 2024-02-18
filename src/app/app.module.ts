@@ -14,6 +14,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { ImageModalComponent } from './components/image-modal/image-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     ServicesComponent,
     ImageModalComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
