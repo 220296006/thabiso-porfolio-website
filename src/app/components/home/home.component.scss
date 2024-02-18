@@ -1,3 +1,11 @@
+
+body {
+  position: relative;
+  height: 106vh;
+  margin-right: -70px
+}
+
+
 #home {
   width: 100%;
   height: 106vh;
@@ -61,29 +69,24 @@
   border-bottom: 3px solid #149ddd;
 }
 
-/* Media query for smaller screens */
-@media (m-width: 1024px) {
+/* Media query for tablets */
+@media (max-width: 768px) {
   #home  {
     background-attachment: scroll;
   }
-}
 
-/* Media query for tablets */
-@media (max-width-width: 768px) {
   #home h1 {
-    font-size: 3px;
+    font-size: 23px;
     line-height: 10px;
   }
 
+  #home p {
+    font-size: 16px;
+  }
+
   #home h2 {
-    font-size: 4px;
+    font-size: 14px;
     line-height: 8px;
     margin-bottom: 10px;
   }
-}
-
-body {
-  position: relative;
-  height: 100vh;
-  margin-right: -70px
 }

@@ -1,3 +1,10 @@
+body{
+  border:#f1f507 solid;
+  min-height: 100vh;
+  box-sizing: content-box;
+  margin-right: -235px;
+}
+
 @keyframes slideFromRight {
   from {
     transform: translateX(100%);
@@ -30,7 +37,7 @@
 }
 
 .section-title h2 {
-  font-size: 28px;
+  font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -191,7 +198,6 @@
 }
 
 
-
 /* Show find out more link */
 .find-out-more {
   position: absolute;
@@ -207,50 +213,58 @@
 }
 
 
-@media (max-width: 768px) {
-
+@media screen and (max-width: 768px) {
   .row {
-  margin-right: 100px;
+    margin-right: 258px;
+    margin-left: 99px;
+    justify-content: flex-start;
   }
 
-  .row .icon-box {
-    flex: 0 0 100%; /* Display two icons per row on small screens */
-    max-width: 100%; /* Limit icon box width to 50% of the container */
-  }
-
-  .row2 .row .icon-box{
+  .row2 .row .icon-box {
     flex: 0 0 50%;
     max-width: 50%;
+    margin-bottom: 20px;
+    text-align: left; /* Align text to the left */
   }
 
-  .button-container {
-    position: relative; /* Make the container relatively positioned */
-    margin-top: 10px; /* Add margin to separate button from icon */
+  .row2 .row .icon-box img {
+    width: 40px; /* Make icons smaller */
+    height: 40px; /* Make icons smaller */
   }
 
-  .row .icon-box .button-container {
-    position: relative; /* Change position to relative for button alignment */
-    margin-top: 10px; /* Add margin to separate button from icon */
+  .row2 .row .icon-box p {
+    font-size: 10px; /* Make text smaller */
+    margin-top: 5px;
+    text-align: left; /* Align text to the left */
   }
+  .section-title h2 {
+    font-size: 20px !important; /* Make heading smaller */
+    margin-bottom: 10px; /* Adjust margin bottom */
+    margin-left: -195px;
+}
+
+.section-title p {
+    font-size: 11px !important; /* Make text smaller */
+    margin-bottom: 20px; /* Adjust margin bottom */
+    text-align: left; /* Align text to the left */
+    margin-left:2px;
+
+}
+
 
   .row .icon-box .button-container .find-out-more {
-    position: relative; /* Change position to relative for button alignment */
-    bottom: auto; /* Remove absolute positioning */
-    left: auto; /* Remove absolute positioning */
-    transform: none; /* Remove transform */
-    margin-top: 10px; /* Add margin to separate button from icon */
-    display: inline-block; /* Ensure button is displayed as an inline-block element */
-    text-align: center; /* Center-align the button */
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: left; /* Align button text to the left */
   }
 }
 
-body{
-  border:#f1f507 solid;
-  min-height: 100vh;
-  box-sizing: content-box;
-  margin-right: -235px;
 
-}
+
 
 .testimonials .section-title {
   text-align: center;
@@ -381,12 +395,47 @@ pagination button.active {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .testimonials-container {
-    justify-content: space-around;
+   margin-left: -150px;
+   margin-top: -17px;
+    align-items: center;
+  }
 
-    .testimonial-item {
-      width: calc(50% - 30px);
-    }
+  .testimonial-item {
+    width: 20%;
+    margin-bottom: 20px;
+    padding: 20px; /* Add padding for better spacing */
+  }
+
+  .testimonial-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Make the image circular */
+    margin-bottom: 10px;
+  }
+
+  .quote-icon-left,
+  .quote-icon-right {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 10px; /* Decrease font size of testimonial text */
+  }
+
+  h3 {
+    font-size: 12px; /* Decrease font size of testimonial name */
+    margin-bottom: 5px; /* Add some space below the name */
+  }
+
+  h4 {
+    font-size: 12px; /* Decrease font size of testimonial designation */
+    margin: 0; /* Reset margins */
+  }
+
+  .pagination {
+    margin-top: 20px; /* Adjust margin for pagination */
   }
 }
+
