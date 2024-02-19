@@ -18,18 +18,33 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.urlAfterRedirects.replace('/', '');
-        this.updateDisplayFlags();
+        this.displayPharmacyApp = this.currentRoute === 'pharmacyapp'; 
+        this.displayTheeBestProject = this.currentRoute === 'theebestproject';
+        this.displayVPBankApp = this.currentRoute === 'vpbankapp'
       }
     });
   }
 
+  navigateToHome() {
+    this.router.navigate(['/home']);
+  }
+
   ngOnInit() {
+    // Subscribe to observables for displaying other projects
     this.sharedService.getShowPharmacyAppObservable().subscribe((display: boolean) => {
       this.displayPharmacyApp = display;
-      this.updateDisplayFlags();
+    });
+
+    this.sharedService.getShowTheeBestProjectObservable().subscribe((display: boolean) => {
+      this.displayTheeBestProject = display;
+    });
+
+    this.sharedService.getShowVPBankAppObservable().subscribe((display: boolean) => {
+      this.displayVPBankApp = display;
     });
   }
 
+  // Methods to handle display events for each project
   onDisplayPharmacyApp() {
     this.displayPharmacyApp = true;
     this.displayTheeBestProject = false;
@@ -46,23 +61,5 @@ export class AppComponent implements OnInit {
     this.displayPharmacyApp = false;
     this.displayTheeBestProject = false;
     this.displayVPBankApp = true;
-  }
-
-  private updateDisplayFlags() {
-    this.displayPharmacyApp = this.currentRoute === 'pharmacyapp'; 
-    this.displayTheeBestProject = this.currentRoute === 'theebestproject';
-    this.displayVPBankApp = this.currentRoute === 'vpbankapp';
-
-    // Reset other flags if a specific project is being displayed
-    if (this.displayPharmacyApp) {
-      this.displayTheeBestProject = false;
-      this.displayVPBankApp = false;
-    } else if (this.displayTheeBestProject) {
-      this.displayPharmacyApp = false;
-      this.displayVPBankApp = false;
-    } else if (this.displayVPBankApp) {
-      this.displayPharmacyApp = false;
-      this.displayTheeBestProject = false;
-    }
   }
 }

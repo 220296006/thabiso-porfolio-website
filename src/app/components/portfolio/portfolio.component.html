@@ -24,21 +24,21 @@
           <div class="portfolio-img">
             <img src="assets/images/PharmacyApp.png" alt="Project 1" width="200px">
           </div>
-          <div class="portfolio-description">
-            <h3><a (click)="navigateToPortfolioDetails('pharmacyapp')">Pharmacy App</a></h3>
+          <div>
+            <h3><a [routerLink]="['/portfolio']" [queryParams]="{ project: 'pharmacyapp' }">Pharmacy App</a></h3>
             <p>The Pharmacy App is a web-based application designed to streamline pharmacy operations and provide an
               efficient platform for managing customers, inventory, prescriptions, medications, and invoices. The app
               aims to simplify the process of managing pharmacy-related tasks, enhancing customer experience, and
               improving overall operational efficiency.</p>
           </div>
         </div>
-
+        
         <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-in" data-aos-delay="200">
           <div class="portfolio-img">
             <img src="assets/images/Logo.png" alt="Project 2">
           </div>
-          <div class="portfolio-description">
-            <h3><a (click)="navigateToPortfolioDetails('theebestproject')">Thee Best Project</a></h3>
+          <div>
+            <h3><a [routerLink]="['/portfolio']" [queryParams]="{ project: 'theebestproject' }">Thee Best Project</a></h3>
             <p>We built a fully functional and responsive Construction website. Using the last Web Development
               Technologies.The website is your premier destination for top-tier construction services.
               With an unwavering commitment to excellence, we bring your architectural dreams to life.
@@ -48,18 +48,19 @@
               pinnacle of construction expertise with "Thee Best Group Project.</p>
           </div>
         </div>
-
+        
         <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-in" data-aos-delay="300">
           <div class="portfolio-img">
             <img src="assets/images/Fast Money.png" alt="Project 3">
           </div>
-          <div class="portfolio-description">
-            <h3><a (click)="navigateToPortfolioDetails('vpbankapp')">VP Bank App</a></h3>
+          <div>
+            <h3><a [routerLink]="['/portfolio']" [queryParams]="{ project: 'vpbankapp' }">VP Bank App</a></h3>
             <p> VP Bank App, is a banking application designed to provide users with a seamless and secure banking experience. 
               The Bank Application is built with Python for the server and Tkinter in the front-end.
             </p>
           </div>
         </div>
+        
       </div>
     </div>
   </section>

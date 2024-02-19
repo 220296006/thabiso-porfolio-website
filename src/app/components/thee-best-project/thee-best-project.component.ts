@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from 'src/app/shared/shared-service.service';
 
@@ -7,7 +7,7 @@ import { SharedService } from 'src/app/shared/shared-service.service';
   templateUrl: './thee-best-project.component.html',
   styleUrls: ['./thee-best-project.component.scss']
 })
-export class TheeBestProjectComponent {
+export class TheeBestProjectComponent implements OnInit {
   displayComponent: boolean = false;
 
   constructor(private sharedService: SharedService, private router: Router) { }
@@ -18,12 +18,12 @@ export class TheeBestProjectComponent {
 
   navigatePortfolio() {
     this.router.navigate(['/portfolio']);
-    }
+  }
 
   ngOnInit(): void {
-    this.sharedService.getShowPharmacyAppObservable().subscribe(() => {
-      console.log("Received show pharmacy app event");
-      this.displayComponent = true;
+    this.sharedService.getShowTheeBestProjectObservable().subscribe((display: boolean) => {
+      console.log("Received show Thee Best Project event");
+      this.displayComponent = display;
     });
   }
 }

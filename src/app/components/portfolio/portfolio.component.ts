@@ -1,18 +1,26 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
 
-  @Output() displayPharmacyApp: EventEmitter<void> = new EventEmitter<void>();
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
-  navigateToPortfolioDetails(project: string) {
-    console.log('Navigating to portfolio details:', project); // Log to check if method is being called
-    if (project === 'pharmacyapp' || project === 'theebestproject' || project === 'vpbankapp') {
-      this.displayPharmacyApp.emit();
-    }
+  ngOnInit(): void {
+    // Extract project name from query parameters
+    this.route.queryParams.subscribe(params => {
+      const project = params['project'];
+      if (project) {
+        this.navigateToPortfolioDetails(project);
+      }
+    });
+  }
+
+  navigateToPortfolioDetails(projectName: string) {
+    this.router.navigate([projectName]);
   }
 }
