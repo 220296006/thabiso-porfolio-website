@@ -140,3 +140,46 @@ body {
 .portfolio-description p {
   margin-bottom: 10px;
 }
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.swiper-pagination {
+  display: flex;
+  align-items: center;
+}
+
+.pagination-button {
+  border: none;
+  background-color: transparent;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button.active {
+  background-color: #3fbbc0;
+}
+
+.prev-button,
+.next-button {
+  background-color: #3fbbc0;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: #379ba6;
+}

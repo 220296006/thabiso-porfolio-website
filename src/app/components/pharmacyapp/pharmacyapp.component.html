@@ -27,45 +27,24 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-8">
-          <div class="portfolio-details-slider swiper">
+          <div class="portfolio-details-slider" [@slideAnimation]="currentSlideIndex">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="assets/images/PharmacyApp.png" alt="Project 1" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/PharmacyApp-System-Design.drawio.png" alt="Project 2" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Home-PharmacyApp.png" alt="Project 3" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Users.png" alt="Project 3" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Customers.png" alt="Project 3" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Medications.png" alt="Project 3" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Prescriptions.png" alt="Project 3" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Invoices.png" alt="Project 3" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Inventory.png" alt="Project 3" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Create-User.png" alt="Project 3" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Update-User.png" alt="Project 3" />
+              <div class="swiper-slide" *ngFor="let image of images; let i = index" [style.display]="currentSlideIndex === i ? 'block' : 'none'">
+                <img [src]="image" alt="Project Image" />
               </div>
             </div>
-            <div class="swiper-pagination"></div>
+          </div>
+          <div class="pagination-container">
+            <button class="prev-button" (click)="prevSlide()" [disabled]="currentSlideIndex === 0">&#10094;</button>
+            <div class="swiper-pagination">
+              <button class="pagination-button" *ngFor="let image of images; let i = index" [class.active]="currentSlideIndex === i" (click)="currentSlideIndex = i"></button>
+            </div>
+            <button class="next-button" (click)="nextSlide()" [disabled]="currentSlideIndex === images.length - 1">&#10095;</button>
           </div>
         </div>
+        
+        
+
         <div class="col-lg-4">
           <div class="portfolio-info">
             <h3>Project Information</h3>

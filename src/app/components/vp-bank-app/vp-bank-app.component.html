@@ -27,27 +27,22 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-8">
-          <div class="portfolio-details-slider swiper">
+          <div class="portfolio-details-slider" [@slideAnimation]="currentSlideIndex">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="assets/images/Fast Money.png" alt="Logo" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Welcome Page.png" alt="Logo" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Registration.png" alt="Logo" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Login.png" alt="Logo" />
-              </div>
-              <div class="swiper-slide">
-                <img src="assets/images/Transaction.png" alt="Logo" />
+              <div class="swiper-slide" *ngFor="let image of images; let i = index" [style.display]="currentSlideIndex === i ? 'block' : 'none'">
+                <img [src]="image" alt="Project Image" />
               </div>
             </div>
-            <div class="swiper-pagination"></div>
+          </div>
+          <div class="pagination-container">
+            <button class="prev-button" (click)="prevSlide()" [disabled]="currentSlideIndex === 0">&#10094;</button>
+            <div class="swiper-pagination">
+              <button class="pagination-button" *ngFor="let image of images; let i = index" [class.active]="currentSlideIndex === i" (click)="currentSlideIndex = i"></button>
+            </div>
+            <button class="next-button" (click)="nextSlide()" [disabled]="currentSlideIndex === images.length - 1">&#10095;</button>
           </div>
         </div>
+        
         <div class="col-lg-4">
           <div class="portfolio-info">
             <h3>Project Information</h3>
