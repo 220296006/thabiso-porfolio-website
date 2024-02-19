@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Details VP Bank App</title>
+</head>
+
+<body>
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Portfolio Details</h2>
+        <ol>
+            <li><a (click)="navigateToHome()">Home</a></li>
+            <li><a (click)="navigatePortfolio()">Portfolio</a></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <!-- End Breadcrumbs -->
+
+  <!-- ======= Portfolio Details Section ======= -->
+  <section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/images/Fast Money.png" alt="Logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/Welcome Page.png" alt="Logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/Registration.png" alt="Logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/Login.png" alt="Logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/Transaction.png" alt="Logo" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="portfolio-info">
+            <h3>Project Information</h3>
+            <ul>
+              <li><strong>Category</strong>: Pyhton Banking Application</li>
+              <li><strong>Client</strong>: Group Project</li>
+              <li><strong>Project date</strong>: 13 November, 2023</li>
+              <li>
+                <strong>Project URL</strong>:
+                <a href="https://github.com/220296006/banking-app-py-master">www.vpbankapp.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="portfolio-description">
+            <h2>VP Bank App</h2>
+            <b>1. Technology Stack</b>
+            <br />
+            <p>The VP Bank utilizes the following technology stack:</p>
+            <br />
+            <b>Backend</b>
+            <ol>
+              <li><a href="https://www.python.org" target="_blank" rel="noreferrer">
+                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                    alt="python" width="40" height="40" />
+                </a>Language: Python</li>
+              <li> <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img
+                    src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40"
+                    height="40" /> </a>Framework: Flask</li>
+              <li> <a href="https://www.sqlite.org/" target="_blank" rel="noreferrer"> <img
+                    src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="sqlite" width="40"
+                    height="40" /> </a>Database: SQLite</li>
+            </ol>
+            <b>Frontend</b>
+            <ol>
+              <li>GUI Library: Tkinter (Python's standard GUI library) Styling:</li>
+              <li>Custom styles for a user-friendly interface</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Portfolio Details Section -->
+</body>
+
+</html>

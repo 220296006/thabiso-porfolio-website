@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class PortfolioComponent {
 
+  @Output() displayPharmacyApp: EventEmitter<void> = new EventEmitter<void>();
+
+  navigateToPortfolioDetails(project: string) {
+    console.log('Navigating to portfolio details:', project); // Log to check if method is being called
+    if (project === 'pharmacyapp' || project === 'theebestproject' || project === 'vpbankapp') {
+      this.displayPharmacyApp.emit();
+    }
+  }
 }

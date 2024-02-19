@@ -15,6 +15,10 @@ import { ImageModalComponent } from './components/image-modal/image-modal.compon
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { PharmacyappComponent } from './components/pharmacyapp/pharmacyapp.component';
+import { SharedService } from './shared/shared-service.service';
+import { TheeBestProjectComponent } from './components/thee-best-project/thee-best-project.component';
+import { VpBankAppComponent } from './components/vp-bank-app/vp-bank-app.component';
 
 
 @NgModule({
@@ -26,6 +30,9 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     ServicesComponent,
     ImageModalComponent,
     PortfolioComponent,
+    PharmacyappComponent,
+    TheeBestProjectComponent,
+    VpBankAppComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     MatDialogModule,
     HttpClientModule
   ],
-  providers: [], 
+  providers: [SharedService], 
    bootstrap: [AppComponent]
 })
 export class AppModule { }

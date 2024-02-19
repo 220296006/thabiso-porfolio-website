@@ -1,43 +1,68 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { SharedService } from 'src/app/shared/shared-service.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  componentInView: boolean = false;
+  displayPharmacyApp = false;
+  displayTheeBestProject = false;
+  displayVPBankApp = false;
+  currentRoute: string = '';
+
+  constructor(private sharedService: SharedService, private router: Router) {
+    // Subscribe to router events to update currentRoute
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute = event.urlAfterRedirects.replace('/', '');
+        this.updateDisplayFlags();
+      }
+    });
+  }
 
   ngOnInit() {
-    // Check if any of the components are initially in the viewport on component initialization
-    this.checkComponentsInView();
+    this.sharedService.getShowPharmacyAppObservable().subscribe((display: boolean) => {
+      this.displayPharmacyApp = display;
+      this.updateDisplayFlags();
+    });
   }
 
-  checkComponentsInView() {
-    // Array of component selectors to query
-    const componentSelectors = ['app-home', 'app-about', 'app-services'];
+  onDisplayPharmacyApp() {
+    this.displayPharmacyApp = true;
+    this.displayTheeBestProject = false;
+    this.displayVPBankApp = false;
+  }
 
-    // Check if any of the components are in the viewport
-    for (const selector of componentSelectors) {
-      const element = document.querySelector(selector);
-      if (element) {
-        const isInView = this.isElementInViewport(element);
-        if (isInView) {
-          this.componentInView = true; // Set the flag to true if any component is in view
-          console.log(isInView)
-          return; // Exit the loop early if a component is found
-        }
-      }
+  onDisplayTheeBestProject() {
+    this.displayPharmacyApp = false;
+    this.displayTheeBestProject = true;
+    this.displayVPBankApp = false;
+  }
+
+  onDisplayVPBankApp() {
+    this.displayPharmacyApp = false;
+    this.displayTheeBestProject = false;
+    this.displayVPBankApp = true;
+  }
+
+  private updateDisplayFlags() {
+    this.displayPharmacyApp = this.currentRoute === 'pharmacyapp'; 
+    this.displayTheeBestProject = this.currentRoute === 'theebestproject';
+    this.displayVPBankApp = this.currentRoute === 'vpbankapp';
+
+    // Reset other flags if a specific project is being displayed
+    if (this.displayPharmacyApp) {
+      this.displayTheeBestProject = false;
+      this.displayVPBankApp = false;
+    } else if (this.displayTheeBestProject) {
+      this.displayPharmacyApp = false;
+      this.displayVPBankApp = false;
+    } else if (this.displayVPBankApp) {
+      this.displayPharmacyApp = false;
+      this.displayTheeBestProject = false;
     }
-  }
-
-  isElementInViewport(element: Element | null): boolean {
-    if (!element) return false;
-    const rect = element.getBoundingClientRect();
-    console.log(rect)
-    return (
-      rect.top <= window.innerHeight && // Check if top edge is visible
-      rect.bottom >= 0 // Check if bottom edge is visible
-    );
   }
 }

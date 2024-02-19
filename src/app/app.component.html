@@ -1,5 +1,36 @@
 <app-navigation></app-navigation>
-<app-home></app-home> 
-<app-about></app-about>
-<app-services></app-services> 
-<app-portfolio></app-portfolio>
+
+<div class="main-content">
+  <div class="container">
+    <!-- Conditional rendering of components -->
+    <app-home
+      *ngIf="
+        (!displayPharmacyApp && !displayTheeBestProject && !displayVPBankApp) ||
+        currentRoute === 'home'
+      "
+    ></app-home>
+    <app-about
+      *ngIf="
+        !displayPharmacyApp && !displayTheeBestProject && !displayVPBankApp
+      "
+    ></app-about>
+    <app-services
+      *ngIf="
+        !displayPharmacyApp && !displayTheeBestProject && !displayVPBankApp
+      "
+    ></app-services>
+    <app-portfolio
+      *ngIf="
+        !displayPharmacyApp && !displayTheeBestProject && !displayVPBankApp
+      "
+      (displayPharmacyApp)="onDisplayPharmacyApp()"
+      (displayTheeBestProject)="onDisplayTheeBestProject()"
+      (displayVPBankApp)="onDisplayVPBankApp()"
+    ></app-portfolio>
+    <app-pharmacy-app *ngIf="displayPharmacyApp"></app-pharmacy-app>
+    <app-thee-best-project
+      *ngIf="displayTheeBestProject"
+    ></app-thee-best-project>
+    <app-vp-bank-app *ngIf="displayVPBankApp"></app-vp-bank-app>
+  </div>
+</div>
