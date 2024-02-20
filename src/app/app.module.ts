@@ -19,6 +19,8 @@ import { PharmacyappComponent } from './components/pharmacyapp/pharmacyapp.compo
 import { SharedService } from './shared/shared-service.service';
 import { TheeBestProjectComponent } from './components/thee-best-project/thee-best-project.component';
 import { VpBankAppComponent } from './components/vp-bank-app/vp-bank-app.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { VpBankAppComponent } from './components/vp-bank-app/vp-bank-app.compone
     PharmacyappComponent,
     TheeBestProjectComponent,
     VpBankAppComponent,
+    ContactComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,9 @@ import { VpBankAppComponent } from './components/vp-bank-app/vp-bank-app.compone
     BrowserAnimationsModule,
     MatIconModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    TooltipModule.forRoot(),
+
   ],
   providers: [SharedService], 
    bootstrap: [AppComponent]

@@ -17,12 +17,11 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box">
             <div class="popup-link">
-              <div class="icon" (click)="toggleDescription(0)">
-                <mat-icon >code</mat-icon>
+              <div class="icon">
+                <mat-icon  [tooltip]="descriptions[0]"  tooltipClass="'tooltip-custom'"  triggers="mouseenter:mouseleave">code</mat-icon>
               </div>
               <h4 class="title">Front-End Development</h4>
               <p class="description" [hidden]="!showDescription[0]">
-                {{ descriptions[0] }}
               </p>
               <div class="button-container">
                 <button
@@ -41,8 +40,8 @@
 
           <div class="col-lg-4 col-md-6 icon-box">
             <div class="popup-link">
-              <div class="icon" (click)="toggleDescription(1)">
-                <mat-icon >build</mat-icon>
+              <div class="icon" >
+                <mat-icon [tooltip]="descriptions[1]"  triggers="mouseenter:mouseleave">build</mat-icon>
               </div>
               <h4 class="title">Back-End Development</h4>
               <p class="description" [hidden]="!showDescription[1]">
@@ -63,8 +62,8 @@
 
           <div class="col-lg-4 col-md-6 icon-box">
             <div class="popup-link">
-              <div class="icon" (click)="toggleDescription(2)">
-                <mat-icon >storage</mat-icon>
+              <div class="icon">
+                <mat-icon [tooltip]="descriptions[2]"  triggers="mouseenter:mouseleave">storage</mat-icon>
               </div>
               <h4 class="title">Database Management</h4>
               <p class="description" [hidden]="!showDescription[2]">

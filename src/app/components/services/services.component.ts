@@ -32,7 +32,11 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 export class ServicesComponent {
   constructor(private renderer: Renderer2, private elementRef: ElementRef, private dialog: MatDialog) { }
+  tooltipText: string = 'This is a tooltip';
 
+  tooltipClass = {
+    containerClass: 'tooltip-custom'
+  };
   descriptions: string[] = [
     "I specialize in creating intuitive and responsive user interfaces. From building interactive web applications to crafting visually appealing websites, I ensure a seamless user experience on the front end.",
     "My expertise extends to server-side development, where I design and implement robust APIs and backend systems. I focus on performance, security, and scalability to power your applications.",

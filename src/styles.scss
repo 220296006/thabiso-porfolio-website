@@ -26,3 +26,9 @@ h6 {
   font-family: "Roboto Mono", sans-serif;
 }
 
+
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";

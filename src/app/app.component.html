@@ -21,4 +21,7 @@
     <app-thee-best-project *ngIf="displayTheeBestProject"></app-thee-best-project>
     <app-vp-bank-app *ngIf="displayVPBankApp"></app-vp-bank-app>
   </div>
+  <app-contact *ngIf="
+  !displayPharmacyApp && !displayTheeBestProject && !displayVPBankApp
+"></app-contact>
 </div>

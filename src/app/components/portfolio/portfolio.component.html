@@ -1,69 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <section id="portfolio" class="portfolio section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>
+            As a passionate Full Stack Software Engineer, I bring a wealth of
+            experience in both front-end and back-end development to the table.
+            My journey in the world of technology and coding has equipped me
+            with the skills needed to craft innovative and user-friendly web and
+            mobile applications. I thrive on tackling complex challenges and
+            delivering efficient, scalable solutions. Explore my portfolio to
+            see some of my recent projects showcasing my skills in app and web
+            development.
+          </p>
+        </div>
+        <div class="row">
+          <div
+            class="col-lg-4 col-md-6 portfolio-item"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="portfolio-img">
+              <img
+                src="assets/images/PharmacyApp.png"
+                alt="Project 1"
+                width="200px"
+              />
+            </div>
+            <div>
+              <h3>
+                <a
+                  [routerLink]="['/portfolio']"
+                  [queryParams]="{ project: 'pharmacyapp' }"
+                  tooltip="Learn More About Pharmacy App"
+                  >Pharmacy App</a
+                >
+              </h3>
+              <p>
+                The Pharmacy App is a web-based application designed to
+                streamline pharmacy operations and provide an efficient platform
+                for managing customers, inventory, prescriptions, medications,
+                and invoices. The app aims to simplify the process of managing
+                pharmacy-related tasks, enhancing customer experience, and
+                improving overall operational efficiency.
+              </p>
+            </div>
+          </div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-</head>
-<body>
-  <section id="portfolio" class="portfolio section-bg" data-aos="fade-up">
-    <div class="container">
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>As a passionate Full Stack Software Engineer, I bring a wealth of experience in both front-end and back-end
-          development to the table. My journey in the world of technology and coding has equipped me with the skills
-          needed
-          to craft innovative and user-friendly web and mobile applications. I thrive on tackling complex challenges and
-          delivering efficient,
-          scalable solutions.
-          Explore my portfolio to see some of my recent projects showcasing my skills in app and web development.</p>
+          <div
+            class="col-lg-4 col-md-6 portfolio-item"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div class="portfolio-img">
+              <img src="assets/images/Logo.png" alt="Project 2" />
+            </div>
+            <div>
+              <h3>
+                <a
+                  [routerLink]="['/portfolio']"
+                  [queryParams]="{ project: 'theebestproject' }"
+                  tooltip="Learn More About Thee Best Project"
+                  >Thee Best Project</a
+                >
+              </h3>
+              <p>
+                We built a fully functional and responsive Construction website.
+                Using the last Web Development Technologies.The website is your
+                premier destination for top-tier construction services. With an
+                unwavering commitment to excellence, we bring your architectural
+                dreams to life. Our expert team of builders, designers, and
+                craftsmen collaborates seamlessly to construct and renovate
+                spaces that surpass your expectations. From residential homes to
+                commercial structures, we pride ourselves on delivering quality,
+                precision, and innovation in every project. Experience the
+                pinnacle of construction expertise with "Thee Best Group
+                Project.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6 portfolio-item"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div class="portfolio-img">
+              <img src="assets/images/Fast Money.png" alt="Project 3" />
+            </div>
+            <div>
+              <h3>
+                <a
+                  [routerLink]="['/portfolio']"
+                  [queryParams]="{ project: 'vpbankapp' }"
+                  tooltip="Learn More About VP Bank App"
+                  >VP Bank App</a
+                >
+              </h3>
+              <p>
+                VP Bank App, is a banking application designed to provide users
+                with a seamless and secure banking experience. The Bank
+                Application is built with Python for the server and Tkinter in
+                the front-end.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-in" data-aos-delay="100">
-          <div class="portfolio-img">
-            <img src="assets/images/PharmacyApp.png" alt="Project 1" width="200px">
-          </div>
-          <div>
-            <h3><a [routerLink]="['/portfolio']" [queryParams]="{ project: 'pharmacyapp' }">Pharmacy App</a></h3>
-            <p>The Pharmacy App is a web-based application designed to streamline pharmacy operations and provide an
-              efficient platform for managing customers, inventory, prescriptions, medications, and invoices. The app
-              aims to simplify the process of managing pharmacy-related tasks, enhancing customer experience, and
-              improving overall operational efficiency.</p>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-in" data-aos-delay="200">
-          <div class="portfolio-img">
-            <img src="assets/images/Logo.png" alt="Project 2">
-          </div>
-          <div>
-            <h3><a [routerLink]="['/portfolio']" [queryParams]="{ project: 'theebestproject' }">Thee Best Project</a></h3>
-            <p>We built a fully functional and responsive Construction website. Using the last Web Development
-              Technologies.The website is your premier destination for top-tier construction services.
-              With an unwavering commitment to excellence, we bring your architectural dreams to life.
-              Our expert team of builders, designers, and craftsmen collaborates seamlessly to construct and
-              renovate spaces that surpass your expectations. From residential homes to commercial structures,
-              we pride ourselves on delivering quality, precision, and innovation in every project. Experience the
-              pinnacle of construction expertise with "Thee Best Group Project.</p>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-in" data-aos-delay="300">
-          <div class="portfolio-img">
-            <img src="assets/images/Fast Money.png" alt="Project 3">
-          </div>
-          <div>
-            <h3><a [routerLink]="['/portfolio']" [queryParams]="{ project: 'vpbankapp' }">VP Bank App</a></h3>
-            <p> VP Bank App, is a banking application designed to provide users with a seamless and secure banking experience. 
-              The Bank Application is built with Python for the server and Tkinter in the front-end.
-            </p>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-  <div #scrollToTopElement style="position: fixed; top: 0;"></div>
-</body>
+    </section>
+    <div #scrollToTopElement style="position: fixed; top: 0"></div>
+  </body>
 </html>

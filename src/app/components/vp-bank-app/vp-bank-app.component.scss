@@ -1,5 +1,8 @@
 body {
     margin-top: 100px;
+    margin-top: 14px;
+    margin-left: 220px;
+
   }
   
   
@@ -182,4 +185,11 @@ body {
 .prev-button:hover,
 .next-button:hover {
   background-color: #379ba6;
+}
+
+@media screen and (max-width: 768px) {
+  body{
+    margin-left:30px;
+    margin-top: 55px;
+  }
 }

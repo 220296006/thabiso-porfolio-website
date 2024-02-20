@@ -8,6 +8,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PortfolioComponent implements OnInit {
 
+  // Define tooltip content
+  tooltipContent: { [key: string]: string } = {
+    'pharmacyapp': 'Tooltip for Pharmacy App',
+    'theebestproject': 'Tooltip for Thee Best Project',
+    'vpbankapp': 'Tooltip for VP Bank App'
+  };
+
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -18,6 +25,7 @@ export class PortfolioComponent implements OnInit {
         this.navigateToPortfolioDetails(project);
       }
     });
+    
   }
 
   navigateToPortfolioDetails(projectName: string) {

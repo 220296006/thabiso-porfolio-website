@@ -7,11 +7,13 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { PharmacyappComponent } from './components/pharmacyapp/pharmacyapp.component';
 import { TheeBestProjectComponent } from './components/thee-best-project/thee-best-project.component';
 import { VpBankAppComponent } from './components/vp-bank-app/vp-bank-app.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  {path: 'contact', component: ContactComponent},
   { path: 'services', component: ServicesComponent },
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'pharmacyapp', component: PharmacyappComponent },

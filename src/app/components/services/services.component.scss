@@ -214,8 +214,8 @@ body{
 
 @media screen and (max-width: 768px) {
   .row {
-    margin-right: 258px;
-    margin-left: 99px;
+    margin-right: 300px;
+    margin-left: 80px;
     justify-content: flex-start;
   }
 
@@ -239,7 +239,7 @@ body{
   .section-title h2 {
     font-size: 20px !important; /* Make heading smaller */
     margin-bottom: 10px; /* Adjust margin bottom */
-    margin-left: -195px;
+    margin-left: -205px;
 }
 
 .section-title p {
@@ -435,6 +435,12 @@ pagination button.active {
 
   .pagination {
     margin-top: 20px; /* Adjust margin for pagination */
+    margin-right:180px;
   }
+}
+
+.tooltip-custom .tooltip-inner {
+  background-color: white !important;
+  color: black !important;
 }
 
