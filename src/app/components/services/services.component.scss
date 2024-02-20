@@ -442,13 +442,10 @@ pagination button.active {
 }
 
 .tooltip-custom .tooltip-inner {
-  background-color: white !important;
-  color: black !important;
+  background-color: #273B4A !important;
+  color: rgb(233, 233, 233) !important;
 }
 
-.icon-box:hover {
-  animation: dance 0.5s infinite alternate;
-}
 
 @keyframes dance {
   0% {

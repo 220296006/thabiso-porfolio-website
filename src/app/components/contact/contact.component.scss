@@ -82,7 +82,7 @@ body {
 
 .contact .php-email-form {
   width: 100%;
-  background: #fff;
+  background: #273B4A;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
   padding: 30px;
 }
@@ -154,11 +154,12 @@ body {
 
 .contact .php-email-form button[type=submit] {
   background: var(--color-primary);
-  border: 0;
+  border: 66;
   padding: 10px 35px;
-  color: #0f5e5e;
+  color: white;
   transition: 0.4s;
-  border-radius: 5px;
+  background-color: #273B4A;
+  border-radius: 12px;
 }
 
 .contact .php-email-form button[type=submit]:hover {

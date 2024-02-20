@@ -98,7 +98,7 @@ export class ServicesComponent {
   }
 
   setupIconAnimations(): void {
-    const icons = document.querySelectorAll('.icon-box');
+    const icons = document.querySelectorAll('.row2 .icon-box');
 
     icons.forEach(icon => {
       icon.addEventListener('mouseenter', () => {
