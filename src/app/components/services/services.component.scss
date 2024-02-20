@@ -394,6 +394,8 @@ pagination button.active {
   }
 }
 
+
+
 @media screen and (max-width: 768px) {
   .testimonials-container {
    margin-left: -150px;
@@ -444,3 +446,15 @@ pagination button.active {
   color: black !important;
 }
 
+.icon-box:hover {
+  animation: dance 0.5s infinite alternate;
+}
+
+@keyframes dance {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}

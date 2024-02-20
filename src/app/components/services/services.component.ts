@@ -2,6 +2,7 @@ import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ImageModalComponent } from '../image-modal/image-modal.component';
 import { trigger, transition, style, animate } from '@angular/animations';
+import anime from 'animejs/lib/anime.es.js';
 
 @Component({
   selector: 'app-services',
@@ -93,8 +94,29 @@ export class ServicesComponent {
   ngOnInit(): void {
     // Automatically switch testimonials every 5 seconds
     setInterval(() => this.nextTestimonial(), 5000);
+    this.setupIconAnimations();
   }
 
+  setupIconAnimations(): void {
+    const icons = document.querySelectorAll('.icon-box');
+
+    icons.forEach(icon => {
+      icon.addEventListener('mouseenter', () => {
+        anime({
+          targets: icon,
+          translateX: [-5, 5],
+          easing: 'easeInOutQuad',
+          duration: 100,
+          direction: 'alternate',
+          loop: true
+        });
+      });
+
+      icon.addEventListener('mouseleave', () => {
+        anime.remove(icon); // Remove any running animations
+      });
+    });
+  }
 
   nextTestimonial(): void {
     const currentIndex = this.testimonials.findIndex((t) => t === this.testimonials[this.selectedIndex]);
