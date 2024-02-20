@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 export class ContactComponent {
 
   loading = false;
-  reCaptchaSiteKey = '6LfTPHkpAAAAAFfwcEaHUohNmHwH4C672ZGRoOJI';
+  public_key = 'T6CPf2_zdjm8Yjlwa'; // Your public key as a string
 
   constructor(private recaptchaV3Service: ReCaptchaV3Service) {}
 
@@ -20,7 +20,7 @@ export class ContactComponent {
     this.loading = true;
 
     // Verify reCAPTCHA
-    this.recaptchaV3Service.execute(this.reCaptchaSiteKey).subscribe({
+    this.recaptchaV3Service.execute('6LeRn3kpAAAAAHVeM77stnDdCq2z1FZPelmc46Uk').subscribe({
       next: (token: string) => {
         // reCAPTCHA token received, proceed with sending email
         const templateParams = {
@@ -28,10 +28,11 @@ export class ContactComponent {
           email: (document.getElementById('email') as HTMLInputElement).value,
           subject: (document.getElementById('subject') as HTMLInputElement).value,
           message: (document.getElementById('message') as HTMLTextAreaElement).value,
-          reCaptchaToken: token
+          reCaptchaToken: token,
+          public_key: this.public_key,
         };
     
-        emailjs.send('service_e8ac38s', 'template_8ocyiuf', templateParams).then(
+        emailjs.send('service_e8ac38s', 'template_8ocyiuf', templateParams, this.public_key).then(
           (response: EmailJSResponseStatus) => {
             console.log('SUCCESS!', response);
             this.loading = false;

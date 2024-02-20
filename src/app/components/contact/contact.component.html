@@ -1,169 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfTPHkpAAAAAFfwcEaHUohNmHwH4C672ZGRoOJI"></script>
-
-  </head>
-  <body>
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-6">
-            <div
-              class="info-item d-flex flex-column justify-content-center align-items-center"
-            >
-              <mat-icon
-                aria-hidden="false"
-                aria-label="address icon"
-                fontIcon="room"
-              ></mat-icon>
-              <h3>My Address</h3>
-              <p>41578 Ndyondyo Street, Makhaza, Khayelitsha 7784</p>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeRn3kpAAAAAHVeM77stnDdCq2z1FZPelmc46Uk"></script>
+</head>
+<body>
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="row gy-4">
+        <!-- Location Section -->
+        <div class="col-lg-6  location-info">
+          <div class="info-item d-flex flex-column justify-content-center align-items-center">
+            <mat-icon aria-hidden="false" aria-label="address icon" fontIcon="room"></mat-icon>
+            <h3>Location</h3>
+            <p>Cape Town, South Africa</p>
           </div>
-          <!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div
-              class="info-item d-flex flex-column justify-content-center align-items-center"
-            >
-              <mat-icon
-                aria-hidden="false"
-                aria-label="email icon"
-                fontIcon="email"
-              ></mat-icon>
-              <h3>Email Me</h3>
-              <a>Thabisomatsaba96gmail.com</a>
-            </div>
-          </div>
-          <!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div
-              class="info-item d-flex flex-column justify-content-center align-items-center"
-            >
-              <mat-icon
-                aria-hidden="false"
-                aria-label="phone icon"
-                fontIcon="phone"
-              ></mat-icon>
-              <h3>Call Me</h3>
-              <p>+2783 686 5724</p>
-            </div>
-          </div>
-          <!-- End Info Item -->
         </div>
-
-        <div class="row gy-4 mt-1">
-          <div class="col-lg-6">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7863.346328220155!2d18.70942717520872!3d-34.04053958897398!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc495f20522ff7%3A0x4f3284745872e012!2sNdyondyo%20St%2C%20T3-V5%2C%20Cape%20Town%2C%207784!5e0!3m2!1sen!2sza!4v1696921778627!5m2!1sen!2sza"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+        <!-- End Location Section -->
+        
+        <!-- Phone Section -->
+        <div class="col-lg-6 phone-info">
+          <div class="info-item d-flex flex-column justify-content-center align-items-center">
+            <mat-icon aria-hidden="false" aria-label="phone icon" fontIcon="phone"></mat-icon>
+            <h3>Call Me</h3>
+            <p>+2783 686 5724</p>
           </div>
-          <!-- End Google Maps -->
-
-          <div class="col-lg-6">
-            <form
-              action="/send-email"
-              method="post"
-              role="form"
-              class="php-email-form"
-            (submit)="sendEmail($event)">
-              <div class="row gy-4">
-                <div class="col-lg-6 form-group">
-                  <input
-                    type="text"
-                    name="name"
-                    class="form-control"
-                    id="name"
-                    placeholder="Your Name"
-                    required
-                  />
-                  <div class="invalid-feedback">Please enter your name.</div>
-                </div>
-                <div class="col-lg-6 form-group">
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    id="email"
-                    placeholder="Your Email"
-                    required
-                  />
-                  <div class="invalid-feedback">
-                    Please enter a valid email address.
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="subject"
-                  id="subject"
-                  placeholder="Subject"
-                  required
-                />
-                <div class="invalid-feedback">Please enter the subject.</div>
-              </div>
-              <div class="form-group">
-                <textarea
-                  class="form-control"
-                  name="message"
-                  id="message"
-                  rows="5"
-                  placeholder="Message"
-                  required
-                ></textarea>
-
-                <div class="invalid-feedback">Please enter your message.</div>
-              </div>
-
-              <div ReCAPTCHA
-              sitekey="6LfTPHkpAAAAAFfwcEaHUohNmHwH4C672ZGRoOJI"
-              onChange={onChange}
-            ></div>
-    
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your message has been sent. Thank you!
-                </div>
-              </div>
-              <div class="text-center">
-                <button
-                  type="submit"
-                  [disabled]="loading"
-                  
-                >
-                  {{ loading ? "Sending..." : "Send Email" }}
-                </button>
-              </div>
-            </form>
-          </div>
-          <!-- End Contact Form -->
         </div>
+        <!-- End Phone Section -->
+
+        <!-- Contact Form Column -->
+        <div class="col-lg-12 contact-info">
+          <form action="/send-email" method="post" role="form" class="php-email-form" (submit)="sendEmail($event)">
+            <div class="row gy-4">
+              <div class="col-lg-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="col-lg-6 form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
+              <div class="invalid-feedback">Please enter the subject.</div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
+              <div class="invalid-feedback">Please enter your message.</div>
+            </div>
+            <re-captcha (resolved)="handleCaptchaResolved($event)" siteKey="6LeRn3kpAAAAAHVeM77stnDdCq2z1FZPelmc46Uk"></re-captcha>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center">
+              <button type="submit" [disabled]="loading">{{ loading ? "Sending..." : "Send Email" }}</button>
+            </div>
+          </form>
+        </div>
+        <!-- End Contact Form Column -->
       </div>
-    </section>
-    <!-- End Contact Section -->
-    <div #scrollToTopElement style="position: fixed; top: 0"></div>
-  </body>
-  <script>
-    function onClick(e) {
-      e.preventDefault();
-      grecaptcha.enterprise.ready(async () => {
-        const token = await grecaptcha.enterprise.execute('6LfTPHkpAAAAAFfwcEaHUohNmHwH4C672ZGRoOJI', {action: 'LOGIN'});
-      });
-    }
-  </script>
+    </div>
+  </section>
+</body>
+<script>
+  function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute('6LeRn3kpAAAAAHVeM77stnDdCq2z1FZPelmc46Uk', {action: 'LOGIN'});
+    });
+  }
+</script>
 </html>

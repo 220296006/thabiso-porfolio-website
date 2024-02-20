@@ -9,7 +9,7 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
 import { AboutComponent } from './components/about/about.component';
 import { RouterModule } from '@angular/router';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ServicesComponent } from './components/services/services.component';
 import { ImageModalComponent } from './components/image-modal/image-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -48,10 +48,11 @@ import { RECAPTCHA_V3_SITE_KEY, ReCaptchaV3Service, RecaptchaModule } from 'ng-r
     MatDialogModule,
     HttpClientModule,
     TooltipModule.forRoot(),
-    RecaptchaModule
+    RecaptchaModule,
+    NoopAnimationsModule
   ],
   providers: [SharedService,
-    {provide: RECAPTCHA_V3_SITE_KEY, useValue: '6LfTPHkpAAAAAFfwcEaHUohNmHwH4C672ZGRoOJI' }, // Provide your reCAPTCHA site key
+    {provide: RECAPTCHA_V3_SITE_KEY, useValue: '6LeRn3kpAAAAAHVeM77stnDdCq2z1FZPelmc46Uk' }, // Provide your reCAPTCHA site key
     ReCaptchaV3Service
   ], 
    bootstrap: [AppComponent]
