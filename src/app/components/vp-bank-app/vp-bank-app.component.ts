@@ -37,10 +37,6 @@ export class VpBankAppComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
-  navigatePortfolio() {
-    this.router.navigate(['/portfolio']);
-  }
-
   ngOnInit(): void {
     this.sharedService.getShowVPBankAppObservable().subscribe((display: boolean) => {
       console.log("Received show VP Bank App event");

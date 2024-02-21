@@ -22,9 +22,7 @@ export class TheeBestProjectComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
-  navigatePortfolio() {
-    this.router.navigate(['/portfolio']);
-  }
+
 
   ngOnInit(): void {
     this.sharedService.getShowTheeBestProjectObservable().subscribe((display: boolean) => {

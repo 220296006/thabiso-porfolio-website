@@ -42,11 +42,7 @@ export class PharmacyappComponent implements OnInit {
   navigateToHome() {
     this.router.navigate(['/home']);
   }
-
-  navigatePortfolio() {
-    this.router.navigate(['/portfolio']);
-  }
-
+  
   ngOnInit(): void {
     this.sharedService.getShowPharmacyAppObservable().subscribe((display: boolean) => {
       console.log("Received show pharmacy app event");
