@@ -21,7 +21,7 @@ import { TheeBestProjectComponent } from './components/thee-best-project/thee-be
 import { VpBankAppComponent } from './components/vp-bank-app/vp-bank-app.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { RECAPTCHA_V3_SITE_KEY, ReCaptchaV3Service, RecaptchaModule } from 'ng-recaptcha';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 
 @NgModule({
@@ -48,12 +48,11 @@ import { RECAPTCHA_V3_SITE_KEY, ReCaptchaV3Service, RecaptchaModule } from 'ng-r
     MatDialogModule,
     HttpClientModule,
     TooltipModule.forRoot(),
-    RecaptchaModule,
+    NgxCaptchaModule,
     NoopAnimationsModule
   ],
-  providers: [SharedService,
-    {provide: RECAPTCHA_V3_SITE_KEY, useValue: '6LeRn3kpAAAAAHVeM77stnDdCq2z1FZPelmc46Uk' }, // Provide your reCAPTCHA site key
-    ReCaptchaV3Service
+  providers: [SharedService, 
+
   ], 
    bootstrap: [AppComponent]
 })
