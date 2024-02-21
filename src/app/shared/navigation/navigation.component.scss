@@ -190,3 +190,19 @@ header a:hover {
     }
 }
 
+/* Adjust footer styling */
+#footer {
+  padding: 15px;
+  color: #f4f6fd;
+  font-size: 14px;
+  background: #111; /* Same as navigation background color */
+  margin-top: 273px;}
+
+/* Adjust media query for small screens */
+@media (max-width: 1199px) {
+  #footer {
+      position: static;
+      width: auto;
+      padding-right: 20px 15px;
+  }
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import emailjs,{ EmailJSResponseStatus } from '@emailjs/browser';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -41,8 +41,6 @@ export class ContactComponent {
         const contactForm = document.getElementById('contactForm') as HTMLFormElement;
         if (contactForm) {
           contactForm.reset(); // Reset form
-        } else {
-          console.error('Contact form not found.');
         }
         Swal.fire('Success!', 'Your message has been sent successfully.', 'success');
       },

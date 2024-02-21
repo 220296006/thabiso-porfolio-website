@@ -72,10 +72,6 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  text-decoration: none;
-  a {
-    text-decoration: none;
-  }
   
 }
 
@@ -87,17 +83,7 @@ section {
   height: 3px;
   background: #3fbbc0;
   bottom: 0;
-  left: calc(50% - 25px);
-  text-decoration: none;
-  a {
-    text-decoration: none;
-  }
-  
-}
-.portfolio .section-title h2::before {
-  text-decoration: none;
-  
-  
+  left: calc(50% - 25px);  
 }
 
 .portfolio .section-title p {
@@ -139,17 +125,16 @@ section {
 }
 
 .portfolio .portfolio-description h3 {
-  color: #444444;
+  color: #3fbbc0;
   transition: 0.3s;
 }
 
 .portfolio .portfolio-description h3:hover, h3:focus, h3:active{
-  text-decoration: none;
   color: #3fbbc0;
 }
 .portfolio .portfolio-description h3 a {
   color: #3fbbc0;
-  text-decoration: none;
+  font-size: bold;
 }
 
 .portfolio .portfolio-description::after {
