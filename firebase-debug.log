@@ -1,0 +1,30 @@
+[debug] [2024-02-22T10:54:34.381Z] ----------------------------------------------------------------------
+[debug] [2024-02-22T10:54:34.385Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Thabiso\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2024-02-22T10:54:34.386Z] CLI Version:   13.3.1
+[debug] [2024-02-22T10:54:34.386Z] Platform:      win32
+[debug] [2024-02-22T10:54:34.386Z] Node Version:  v20.11.0
+[debug] [2024-02-22T10:54:34.386Z] Time:          Thu Feb 22 2024 12:54:34 GMT+0200 (South Africa Standard Time)
+[debug] [2024-02-22T10:54:34.387Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-22T10:54:34.483Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-22T10:54:34.484Z] > authorizing via signed-in user (thabisomatsaba96@gmail.com)
+[debug] [2024-02-22T10:54:34.484Z] [iam] checking project thabiso-matsaba--1708435506926 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-02-22T10:54:34.486Z] > refreshing access token with scopes: []
+[debug] [2024-02-22T10:54:34.488Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-02-22T10:54:34.488Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-02-22T10:54:35.078Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-02-22T10:54:35.078Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-02-22T10:54:35.813Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/thabiso-matsaba--1708435506926:testIamPermissions [none]
+[debug] [2024-02-22T10:54:35.814Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/thabiso-matsaba--1708435506926:testIamPermissions x-goog-quota-user=projects/thabiso-matsaba--1708435506926
+[debug] [2024-02-22T10:54:35.815Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/thabiso-matsaba--1708435506926:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-22T10:54:37.692Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/thabiso-matsaba--1708435506926:testIamPermissions 200
+[debug] [2024-02-22T10:54:37.692Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/thabiso-matsaba--1708435506926:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-22T10:54:37.695Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/thabiso-matsaba--1708435506926 [none]
+[debug] [2024-02-22T10:54:38.465Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/thabiso-matsaba--1708435506926 200
+[debug] [2024-02-22T10:54:38.465Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/thabiso-matsaba--1708435506926 {"projectId":"thabiso-matsaba--1708435506926","projectNumber":"88831671622","displayName":"Thabiso Matsaba Portfolio","name":"projects/thabiso-matsaba--1708435506926","resources":{"hostingSite":"thabiso-matsaba--1708435506926"},"state":"ACTIVE","etag":"1_d83890bd-a6d1-4449-9d7d-01b03d19c7c2"}
+[info] 
+[info] === Deploying to 'thabiso-matsaba--1708435506926'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-02-22T10:54:38.476Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/thabiso-matsaba--1708435506926/versions [none]
+[debug] [2024-02-22T10:54:38.476Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/thabiso-matsaba--1708435506926/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}

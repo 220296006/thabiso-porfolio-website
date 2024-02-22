@@ -22,6 +22,7 @@ import { VpBankAppComponent } from './components/vp-bank-app/vp-bank-app.compone
 import { ContactComponent } from './components/contact/contact.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     TheeBestProjectComponent,
     VpBankAppComponent,
     ContactComponent,
+    BackToTopComponent,
     
   ],
   imports: [

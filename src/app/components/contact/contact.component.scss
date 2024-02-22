@@ -1,6 +1,7 @@
 body {
-  margin-right: -206px;
+  margin-left: 292px;
 }
+
 
 /* Style for the location, phone, and contact info sections */
 .location-info .info-item,
@@ -178,6 +179,8 @@ body {
 
 @media screen and (max-width: 768px) {
   body {
-    margin-right: 15px;
+    margin-left: 0;
+    
   }
+ 
 }
