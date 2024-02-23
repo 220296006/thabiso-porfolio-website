@@ -1,0 +1,25 @@
+/* CSS Styling */
+.feature-animation {
+    position: relative;
+    width: 100%; /* adjust as needed */
+    height: 100vh; /* adjust as needed */
+  }
+  
+  .sphere-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* adjust as needed */
+  }
+  
+  /* Adjust these styles to make the animation background */
+  .square-animation {
+    background-color: black;
+  }
+  
+  /* Additional styling for the SVG */
+  .sphere {
+    fill: url(#sphereGradient); /* Apply the linear gradient */
+  }
+  

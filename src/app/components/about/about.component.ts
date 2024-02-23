@@ -1,4 +1,5 @@
 import { Component, HostListener, ElementRef, Renderer2, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -8,7 +9,11 @@ import { Component, HostListener, ElementRef, Renderer2, OnInit } from '@angular
 export class AboutComponent implements OnInit {
   private hasAnimated = false;
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private elementRef: ElementRef,
+    private renderer: Renderer2,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.checkScroll();
@@ -18,7 +23,7 @@ export class AboutComponent implements OnInit {
   onWindowScroll() {
     this.checkScroll();
   }
-  
+
   checkScroll() {
     if (!this.hasAnimated) {
       const aboutSection = this.elementRef.nativeElement.querySelector('#about');
@@ -39,4 +44,12 @@ export class AboutComponent implements OnInit {
       this.renderer.addClass(element, 'active');
     });
   }
+
+  scrollToContact() {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
 }

@@ -29,6 +29,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   navigateToPortfolioDetails(projectName: string) {
+    window.scrollTo(0, 0);
     this.router.navigate([projectName]);
   }
 }

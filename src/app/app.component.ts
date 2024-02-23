@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { SharedService } from 'src/app/shared/shared-service.service';
+import anime from 'animejs';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,18 @@ export class AppComponent implements OnInit {
   displayVPBankApp = false;
   currentRoute: string = '';
 
+  animateSphere() {
+    const sphere = document.querySelector('.sphere-animation') as HTMLElement;
+
+    anime({
+      targets: sphere,
+      translateY: ['0%', '50%'],
+      rotate: '1turn',
+      duration: 2000,
+      easing: 'easeInOutSine',
+      loop: true
+    });
+  }
   constructor(private sharedService: SharedService, private router: Router) {
     // Subscribe to router events to update currentRoute
     this.router.events.subscribe(event => {
@@ -30,6 +43,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.animateSphere();
+
     // Subscribe to observables for displaying other projects
     this.sharedService.getShowPharmacyAppObservable().subscribe((display: boolean) => {
       this.displayPharmacyApp = display;

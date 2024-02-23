@@ -9,10 +9,7 @@ import { NavigationEnd, Router } from '@angular/router';
 export class NavigationComponent {
   showNav: boolean = false;
 
-  constructor(
-    private router: Router,
-    private elRef: ElementRef
-  ) { }
+  constructor(private router: Router, private elRef: ElementRef) {}
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -50,24 +47,31 @@ export class NavigationComponent {
         block: 'start', // Align element top with viewport top
         inline: 'nearest', // Align element left/right with nearest viewport edge
       });
+
+      // Update the URL to reflect the scrolled section
+      const targetSection = targetId === 'portfolio' ? '' : targetId;
+      this.router.navigate([], {
+        queryParams: { section: targetSection },
+        queryParamsHandling: 'merge',
+      });
     }
   }
 
   private highlightActiveLink() {
     const links = this.elRef.nativeElement.querySelectorAll('#navbar .scrollto');
     const scrollPosition = window.scrollY;
-  
-    links.forEach(link => {
+
+    links.forEach((link) => {
       const routerLink = link.getAttribute('routerLink');
       const targetId = routerLink.substring(1);
       const targetElement = document.getElementById(targetId);
-      
+
       if (targetElement) {
         const targetRect = targetElement.getBoundingClientRect();
         const targetTop = targetRect.top + window.pageYOffset;
         const targetBottom = targetRect.bottom + window.pageYOffset;
         const offset = 100; // Adjust offset as needed
-        
+
         if (
           targetTop <= scrollPosition + offset &&
           targetBottom >= scrollPosition + offset
@@ -79,6 +83,5 @@ export class NavigationComponent {
         }
       }
     });
-  }  
-
+  }
 }
